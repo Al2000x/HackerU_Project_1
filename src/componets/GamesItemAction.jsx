@@ -10,7 +10,7 @@ const GamesItemAction = () => {
  
     const [games] = useGenres(nextP,"action")
     return games ? (
-        <div className="item-Grid justify-items-center">
+        <div className="item-Grid">
             {games.map(game=>{
           return(
             <div key={game.id} className="card" style={{width: '18rem'}}>

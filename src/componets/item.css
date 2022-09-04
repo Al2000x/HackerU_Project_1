@@ -1,4 +1,41 @@
 .item-Grid{
     display: grid;
     grid-template-columns: repeat(4,1fr);
+    justify-items: center;
 }
+@media (max-width: 1399px) { 
+    .card{
+        width: 250px !important;
+    }
+    .card-img-top{
+        width: 250px;
+    }
+ }
+ @media (max-width: 1199px) { 
+    .card{
+        width: 190px !important;
+    }
+    .card-img-top{
+        width: 190px;
+    }
+ }
+ @media (max-width: 991px) { 
+    .card{
+        width: 160px !important;
+    }
+    .card-img-top{
+        width: 160px;
+    }
+ }
+ @media (max-width: 767px) { 
+    .item-Grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .card{
+        width: 250px !important;
+    }
+    .card-img-top{
+        width: 250px;
+    }
+ }
+
