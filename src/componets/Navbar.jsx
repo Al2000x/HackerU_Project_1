@@ -1,6 +1,7 @@
 import React from "react";
 import "./Navbar.css";
 import { useDispatch , useSelector} from "react-redux";
+import Swal from "sweetalert2";
 import { changeTheme } from "../features/theme/theme-toggle-slice";
 import {Link} from 'react-router-dom'
 import darkToggle from '../media/dark.png'
@@ -48,16 +49,15 @@ const Navbar = () => {
                 </a>
               </li>
               <li className="nav-item dropdown">
-                <a
-                  className="nav-link dropdown-toggle "
-                  href="#"
+                <Link to={'/'}
+                  className="nav-link dropdown-toggle"
                   id="navbarDropdownMenuLink"
                   data-toggle="dropdown"
                   aria-haspopup="true"
                   aria-expanded="false"
                 >
                   Dropdown link
-                </a>
+                </Link>
                 <div
                   className="dropdown-menu"
                   aria-labelledby="navbarDropdownMenuLink"
@@ -73,7 +73,6 @@ const Navbar = () => {
                   </a>
                 </div>
               </li>
-              
               <li className="nav-item">
                 <a className="nav-link" href="/about">
                   About
@@ -83,7 +82,11 @@ const Navbar = () => {
           </div>
         </div>
         <div className="flex-grow-1 spacer"></div>
-        <img onClick={()=>{
+        <img onClick={()=>{{selectTheme.dark ? Swal.fire(
+              `light theme`
+            ):Swal.fire(
+              `dark theme`
+            )} 
                 dispatch(changeTheme())
               }} src={selectTheme.dark? darkToggle : lightToggle} height="30px" width='100px'/>
               &nbsp;&nbsp;

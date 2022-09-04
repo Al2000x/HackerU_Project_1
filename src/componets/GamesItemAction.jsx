@@ -1,12 +1,17 @@
-import React from 'react'
-import { useGenres } from '../app/store/gamesData'
+import React, { useEffect }from 'react'
+import { useGenres} from '../app/store/gamesData'
 import {Link} from 'react-router-dom'
 import { useSelector } from 'react-redux'
+import Swal from 'sweetalert2'
 import './item.css'
 
 const GamesItemAction = () => {
   const nextP = useSelector(state =>state.page.pNum)
+  useEffect(() => {
+ 
+  }, [])
   
+
  
     const [games] = useGenres(nextP,"action")
     return games ? (
