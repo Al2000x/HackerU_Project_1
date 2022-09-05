@@ -13,7 +13,7 @@ const GamesItemAction = () => {
   
 
  
-    const [games] = useGenres(nextP,"action")
+    const [games] = useGenres(nextP,"racing")
     return games ? (
         <div className="item-Grid">
             {games.map(game=>{

@@ -1760,6 +1760,11 @@
     "@svgr/plugin-svgo" "^5.5.0"
     "loader-utils" "^2.0.0"
 
+"@sweetalert2/theme-dark@^5.0.12":
+  "integrity" "sha512-F0DxJJhVUixKD1Tk3gXwAy1goONgkP7BIDTZfTN7aZQdY9edLmiSp4d3LNPK49m0ORIG38eDAwJFodgQ5uuEZw=="
+  "resolved" "https://registry.npmjs.org/@sweetalert2/theme-dark/-/theme-dark-5.0.12.tgz"
+  "version" "5.0.12"
+
 "@testing-library/dom@^8.5.0", "@testing-library/dom@>=7.21.4":
   "integrity" "sha512-uxF4zmnLHHDlmW4l+0WDjcgLVwCvH+OVLpD8Dfp+Bjfz85prwxWGbwXgJdLtkgjD0qfOzkJF9SmA6YZPsMYX4w=="
   "resolved" "https://registry.npmjs.org/@testing-library/dom/-/dom-8.16.0.tgz"

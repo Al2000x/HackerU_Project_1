@@ -84,9 +84,13 @@ const Navbar = () => {
         <div className="flex-grow-1 spacer"></div>
         <img onClick={()=>{{selectTheme.dark ? Swal.fire(
               `light theme`
-            ):Swal.fire(
-              `dark theme`
-            )} 
+            ):Swal.fire ({
+              title: `dark theme`,
+              customClass: {
+                confirmButton: `swal-dark-confirm-btn`,
+                popup: `dark`
+              }
+            })} 
                 dispatch(changeTheme())
               }} src={selectTheme.dark? darkToggle : lightToggle} height="30px" width='100px'/>
               &nbsp;&nbsp;

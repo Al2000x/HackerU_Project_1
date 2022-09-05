@@ -7,7 +7,7 @@ const NextPageSlice = createSlice({
     reducers:{
         nextPage(state){
             state.pNum++
-            console.log(state.pNum)  
+            console.log(state.pNum)
         }
     }
 })
