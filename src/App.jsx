@@ -5,7 +5,7 @@ import Favorites from "./pages/Favorites";
 import About from "./pages/About";
 import GameDetails from "./pages/GameDetails";
 import NotFound404 from "./pages/NotFound404";
-import Login from "./pages/Login";
+import LoginLogout from "./pages/LoginLogout";
 import Navbar from "./componets/Navbar";
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
         <Route path="/games" element={<GamesList/>}></Route>
         <Route path="/favorites" element={<Favorites/>}></Route>
         <Route path="/about" element={<About/>}></Route>
-        <Route path="/login" element={<Login/>}></Route>
+        <Route path="/login" element={<LoginLogout/>}></Route>
         <Route path="/*" element={<NotFound404/>}></Route>
         <Route path='/gameDetails' element={<GameDetails/>}></Route>
         {/* <Route path="/games/:gameId" element={<GameDetails/>}></Route> */}

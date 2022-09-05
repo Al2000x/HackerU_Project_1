@@ -13,15 +13,12 @@ const Login = () => {
         <input
           className="mt-3 loginInput"
           type="text"
-          value={userName}
-          onChange={(e) => setUserName(e.target.value)}
         />
         <br />
-        <Link to={"/"}>
+        
           <button className="mt-3 glow-on-hover loginButton">
             Begin your journey
           </button>
-        </Link>
       </div>
     </div>
   );
