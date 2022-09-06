@@ -11,6 +11,7 @@ const Login = () => {
     dispatch(
       login({
         name: name,
+        loggedIn:true
       })
     );
   };

@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux'
 
 import './item.css'
 
-const GamesItemAction = () => {
+const GamesItemAction = ({category}) => {
   const nextP = useSelector(state =>state.page.pNum)
   useEffect(() => {
  
@@ -13,7 +13,7 @@ const GamesItemAction = () => {
   
 
  
-    const [games] = useGenres(nextP,"racing")
+    const [games] = useGenres(nextP,category)
     return games ? (
         <div className="item-Grid">
             {games.map(game=>{

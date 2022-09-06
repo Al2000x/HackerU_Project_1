@@ -4,7 +4,7 @@ import NextPage from '../componets/NextPage'
 const GamesList = () => {
 
   return(<div>
-    <GamesItemAction/>
+    <GamesItemAction category="action"/>
     <NextPage/>
     </div>
   )
