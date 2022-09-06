@@ -2,8 +2,10 @@ import React from "react";
 import "./Navbar.css";
 import { useDispatch, useSelector } from "react-redux";
 import Swal from "sweetalert2";
+import NavDropdown from 'react-bootstrap/NavDropdown';
 import { changeTheme } from "../features/theme/theme-toggle-slice";
-import { Link } from "react-router-dom";
+import { NavLink, Link} from "react-router-dom";
+import { Container, Nav, } from "react-bootstrap";
 import darkToggle from "../media/dark.png";
 import lightToggle from "../media/light.png";
 import darkLoggo from "../media/gamestick_dark_mode.png";
@@ -64,32 +66,19 @@ const Navbar = () => {
                   Features
                 </a>
               </li>
-              <li className="nav-item dropdown">
-                <Link
-                  to={"/"}
-                  className="nav-link dropdown-toggle"
-                  id="navbarDropdownMenuLink"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  Dropdown link
-                </Link>
-                <div
-                  className="dropdown-menu"
-                  aria-labelledby="navbarDropdownMenuLink"
-                >
-                  <a className="dropdown-item " href="#">
-                    Action
-                  </a>
-                  <a className="dropdown-item " href="#">
-                    Another action
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    Something else here
-                  </a>
-                </div>
-              </li>
+             <button style={{background:"black"}}>
+              categories
+              <NavDropdown  label="categories" id="basic-nav-dropdown">
+                <NavDropdown.Item href="/Action/">Action</NavDropdown.Item>
+
+                <NavDropdown.Item href="#action/3.2">Comedy </NavDropdown.Item>
+
+                <NavDropdown.Item href="#action/3.3">Drama</NavDropdown.Item>
+
+                <NavDropdown.Item href="#action/3.4">Thriller</NavDropdown.Item>
+              </NavDropdown>
+             </button>
+              
               <li className="nav-item">
                 <a className="nav-link" href="/about">
                   About
@@ -99,9 +88,7 @@ const Navbar = () => {
           </div>
         </div>
         <div className="flex-grow-1 spacer"></div>
-
         {/* theme changer swal */}
-
         <img
           onClick={() => {
             {
@@ -121,9 +108,7 @@ const Navbar = () => {
           height="30px"
           width="100px"
         />
-
         {/* theme changer swal */}
-        
         &nbsp;&nbsp;
         <Link to={"/login"}>
           <button className=" btn-custom">Login Now!</button>
