@@ -1,12 +1,22 @@
 import { useState } from "react";
-
+import { login } from "../features/user/userSlice";
+import { useDispatch } from "react-redux";
 
 const Login = () => {
   const [name, setName] = useState("");
+  const dispatch = useDispatch;
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    dispatch(
+      login({
+        name: name,
+      })
+    );
+  };
   return (
     <div>
       <div className="loginForm">
-        <form>
+        <form onSubmit={(e) => handleSubmit(e)}>
           <h1>
             WELCOME TO
             <br />
