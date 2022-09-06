@@ -1,0 +1,12 @@
+.logOut{
+    text-align: center;
+    position: relative;
+}
+.takeThis{
+    color: white;
+    padding: 5px;
+    background: black;
+    position: absolute;
+    right: 42%;
+    top: 9rem;
+}

@@ -1,12 +1,15 @@
 import React from "react";
 import Login from "../componets/Login";
-import "./Login.css";
+import Logout from "../componets/Logout";
+import "../componets/Login.css";
+import "../componets/Logout.css";
 const LoginLogout = () => {
   return (
     <>
       <section>
         <div className="LoginBG">
-        <Login></Login>
+        {/* <Login></Login> */}
+        <Logout></Logout>
         </div>
       </section>
     </>

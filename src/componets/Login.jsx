@@ -1,24 +1,32 @@
-import React from "react";
+import { useState } from "react";
+
 
 const Login = () => {
+  const [name, setName] = useState("");
   return (
     <div>
       <div className="loginForm">
-        <h1>
-          WELCOME TO
+        <form>
+          <h1>
+            WELCOME TO
+            <br />
+            GAME INFORMER
+          </h1>
+          <h2>enter username</h2>
+          <input
+            value={name}
+            onChange={(e) => {
+              setName(e.target.value);
+            }}
+            className="mt-3 loginInput"
+            type="text"
+          />
           <br />
-          GAME INFORMER
-        </h1>
-        <h2>enter username</h2>
-        <input
-          className="mt-3 loginInput"
-          type="text"
-        />
-        <br />
-        
-          <button className="mt-3 glow-on-hover loginButton">
-            Begin your journey
+
+          <button type="submit" className="mt-3 glow-on-hover loginButton">
+            Pledge your loyalty
           </button>
+        </form>
       </div>
     </div>
   );
