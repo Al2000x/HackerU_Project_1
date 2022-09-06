@@ -3,13 +3,15 @@ import Login from "../componets/Login";
 import Logout from "../componets/Logout";
 import "../componets/Login.css";
 import "../componets/Logout.css";
+import { useSelector } from "react-redux";
+import { selectUser } from "../features/user/userSlice";
 const LoginLogout = () => {
+  const user = useSelector(selectUser);
   return (
     <>
       <section>
         <div className="LoginBG">
-        {/* <Login></Login> */}
-        <Logout></Logout>
+          {user ?   <Logout/>:<Login/>}
         </div>
       </section>
     </>

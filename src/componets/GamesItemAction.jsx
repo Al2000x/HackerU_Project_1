@@ -2,7 +2,7 @@ import React, { useEffect }from 'react'
 import { useGenres} from '../app/store/gamesData'
 import {Link} from 'react-router-dom'
 import { useSelector } from 'react-redux'
-import Swal from 'sweetalert2'
+
 import './item.css'
 
 const GamesItemAction = () => {

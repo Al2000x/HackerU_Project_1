@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 const Login = () => {
   const [name, setName] = useState("");
   const dispatch = useDispatch;
+  console.log(name)
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(
@@ -29,10 +30,9 @@ const Login = () => {
               setName(e.target.value);
             }}
             className="mt-3 loginInput"
-            type="text"
+            type="name"
           />
           <br />
-
           <button type="submit" className="mt-3 glow-on-hover loginButton">
             Pledge your loyalty
           </button>

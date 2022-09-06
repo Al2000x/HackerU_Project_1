@@ -1,6 +1,9 @@
 import zelda from '../media/zelda.png'
 import { Link } from "react-router-dom";
+import { logout } from "../features/user/userSlice";
+import { useDispatch } from 'react-redux';
 const Logout = () => {
+  const dispatch = useDispatch
   return (
     <div>
       <div className="logOut">
@@ -9,11 +12,11 @@ const Logout = () => {
               Take this alex 
           </h3>
           <img src={zelda} width="500px" alt="" /><br />
-          <Link to={"/"}>
-          <button type="submit" className="mt-3 glow-on-hover loginButton">
+          <button onClick={dispatch(
+            logout()
+          )} type="submit" className="mt-3 glow-on-hover loginButton">
             Begin journy
           </button>
-          </Link >
         </form>
       </div>
     </div>
