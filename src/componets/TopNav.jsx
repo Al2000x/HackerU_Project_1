@@ -2,15 +2,15 @@ import React from "react";
 import "./Navbar.css";
 import { useDispatch, useSelector } from "react-redux";
 import Swal from "sweetalert2";
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import DropdownCategories from "./DropdownCategories";
 import { changeTheme } from "../features/theme/theme-toggle-slice";
-import { NavLink, Link} from "react-router-dom";
+import { Link} from "react-router-dom";
 import darkToggle from "../media/dark.png";
 import lightToggle from "../media/light.png";
 import darkLoggo from "../media/gamestick_dark_mode.png";
 import lightLoggo from "../media/gamestick_light_mode.png";
-import { Navbar, Container, Nav } from "react-bootstrap";
-import { actionGenre, racingGenre } from "../features/games/category-slice";
+import {Navbar} from "react-bootstrap";
+
 
 
 
@@ -56,30 +56,17 @@ const TopNav = () => {
                 
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" to="/"> 
                   Features
-                </a>
+                </Link>
               </li>
-             <button style={{background:"black"}}>
-              categories
-              <NavDropdown  label="categories" id="basic-nav-dropdown">
-                <NavDropdown.Item ><Link className="nav-link text-dark" to="category/action/" onClick={()=>{
-                  dispatch(actionGenre())
-                }}>action</Link></NavDropdown.Item>               
-                 <NavDropdown.Item ><Link className="nav-link text-dark" to="category/racing/" onClick={()=>{
-                  dispatch(racingGenre())
-                }}>racing</Link></NavDropdown.Item> 
-
-                <NavDropdown.Item href="#action/3.3">Drama</NavDropdown.Item>
-
-                <NavDropdown.Item href="#action/3.4">Thriller</NavDropdown.Item>
-              </NavDropdown>
-             </button>
-              
+          
+              <DropdownCategories/>
               <li className="nav-item">
-                <a className="nav-link" href="/about">
+                <Link className="nav-link" to="/about">
                   About
-                </a>
+                </Link>
+              
               </li>
             </ul>
           </div>
