@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 
 const Login = () => {
   const [name, setName] = useState("");
-  const dispatch = useDispatch;
+  const dispatch = useDispatch();
   console.log(name)
   const handleSubmit = (e) => {
     e.preventDefault();

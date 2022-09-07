@@ -8,9 +8,7 @@ import './item.css'
 const GamesItem = ({category}) => {
   const nextP = useSelector(state =>state.page.pNum)
   useEffect(() => {
- 
   }, [])
-  
 
  
     const [games] = useGenres(nextP,category)
