@@ -11,7 +11,7 @@ const LoginLogout = () => {
     <>
       <section>
         <div className="LoginBG">
-          {user ?   <Login/>:<Logout/>}
+          {user  ?  <Logout/>:<Login/>}
         </div>
       </section>
     </>
