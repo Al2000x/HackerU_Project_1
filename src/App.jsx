@@ -7,17 +7,14 @@ import GameDetails from "./pages/GameDetails";
 import NotFound404 from "./pages/NotFound404";
 import LoginLogout from "./pages/LoginLogout";
 import TopNav from "./componets/TopNav";
-import GameCategory from './pages/GameCategory'
 import Home from "./pages/Home";
 
 function App() {
   return (
-
     <div className="container ">
       <TopNav></TopNav>
       <Routes>
         <Route path="/" element={<Home/>}></Route>
-        <Route path="/category" element={<GameCategory/>}></Route>
         <Route path="/category/:id" element={<GamesList/>} ></Route>
         <Route path="/favorites" element={<Favorites/>}></Route>
         <Route path="/about" element={<About/>}></Route>

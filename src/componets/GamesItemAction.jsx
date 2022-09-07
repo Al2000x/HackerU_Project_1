@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux'
 
 import './item.css'
 
-const GamesItemAction = ({category}) => {
+const GamesItem = ({category}) => {
   const nextP = useSelector(state =>state.page.pNum)
   useEffect(() => {
  
@@ -41,4 +41,4 @@ const GamesItemAction = ({category}) => {
 
 
 
-export default GamesItemAction
+export default GamesItem
