@@ -1,6 +1,7 @@
 import React from "react";
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import { Link} from "react-router-dom";
+import {Link} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useDispatch} from "react-redux";
 import {   actionGenre,
     advenrtureGenre,
@@ -12,86 +13,87 @@ import {   actionGenre,
 
 const DropdownCategories = () => {
     const dispatch = useDispatch();
+    const nav = useNavigate()
   return (
     <button style={{ background: "black" }}>
       categories
       <NavDropdown  label="categories" className="shadow" id="basic-nav-dropdown">
         <NavDropdown.Item >
-          <Link
-            className="nav-link text-dark"
-            to="category/action/"
+          <div className="nav-link text-dark"
+            to=""
             onClick={() => {
+              nav('category/action/')  
               dispatch(actionGenre());
-            }}
-          >
+            }}>
+                {/* fill the other navs */}
             action
-          </Link>
+          </div>
         </NavDropdown.Item>
         <NavDropdown.Item>
-          <Link
+          <div
             className="nav-link text-dark"
             to="category/racing/"
             onClick={() => {
               dispatch(racingGenre());
-            }}
-          >
+            }}>
+          
             racing
-          </Link>
+          </div>
         </NavDropdown.Item>
         <NavDropdown.Item>
-          <Link
+          <div
             className="nav-link text-dark"
             to="category/puzzle/"
             onClick={() => {
               dispatch(puzzleGenre());
-            }}
-          >
+            }}>
+          
             puzzle
-          </Link>
+          </div>
         </NavDropdown.Item>
         <NavDropdown.Item>
-          <Link
+          <div
             className="nav-link text-dark"
             to="category/shooter/"
             onClick={() => {
               dispatch(shooterGenre());
-            }}
-          >
+            }}>
+          
             shooter
-          </Link>
+          </div>
         </NavDropdown.Item>
         <NavDropdown.Item>
-          <Link
+          <div
             className="nav-link text-dark"
             to="category/casual/"
             onClick={() => {
               dispatch(casualGenre());
-            }}
-          >
+            }}>
+          
             casual
-          </Link>
+          </div>
         </NavDropdown.Item>
         <NavDropdown.Item>
-          <Link
+          <div
             className="nav-link text-dark"
             to="category/fighting/"
             onClick={() => {
               dispatch(fightingGenre());
-            }}
-          >
+            }}>
+          
             fighting
-          </Link>
+          </div>
         </NavDropdown.Item>
         <NavDropdown.Item>
-          <Link
+          <div
             className="nav-link text-dark"
             to="category/adventure/"
             onClick={() => {
               dispatch(advenrtureGenre());
-            }}
-          >
+            }}>
+          
             adventure
-          </Link>
+          </div>
         </NavDropdown.Item>
 
       </NavDropdown>
