@@ -6,7 +6,7 @@ import About from "./pages/About";
 import GameDetails from "./pages/GameDetails";
 import NotFound404 from "./pages/NotFound404";
 import LoginLogout from "./pages/LoginLogout";
-import Navbar from "./componets/Navbar";
+import TopNav from "./componets/TopNav";
 import GameCategory from './pages/GameCategory'
 import Home from "./pages/Home";
 
@@ -14,7 +14,7 @@ function App() {
   return (
 
     <div className="container ">
-      <Navbar></Navbar>
+      <TopNav></TopNav>
       <Routes>
         <Route path="/" element={<Home/>}></Route>
         <Route path="/category" element={<GameCategory/>}></Route>
