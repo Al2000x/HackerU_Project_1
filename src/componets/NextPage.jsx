@@ -1,16 +1,23 @@
 import React from 'react'
-import { useDispatch } from 'react-redux'
-import { nextPage } from '../features/games/next-page-slice';
+import { useDispatch,useSelector} from 'react-redux'
+import { nextPage, previousPage } from '../features/games/page-slice';
 
 const NextPage = () => {
-    const dispatch=useDispatch();
+  const dispatch=useDispatch();
+  const PageSlice = useSelector((state) => state.page);
+  console.log()
   return (
     <div>
         <nav aria-label="...">
   <ul className="pagination">
-    <li className="page-item disabled">
-      <span className="page-link">Previous</span>
+    <li className="page-item"  onClick={()=>{
+       if(PageSlice.pNum>1){
+         dispatch(previousPage())
+       }
+      }}>
+      <a className="page-link" href="#">Previous</a>
     </li>
+    <h5 className='m-1'>page: {PageSlice.pNum}</h5>
     <li className="page-item"onClick={()=>{
         dispatch(nextPage());
     }}>
