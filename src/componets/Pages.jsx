@@ -2,7 +2,7 @@ import React from 'react'
 import { useDispatch,useSelector} from 'react-redux'
 import { nextPage, previousPage } from '../features/games/page-slice';
 
-const NextPage = () => {
+const Pages = () => {
   const dispatch=useDispatch();
   const PageSlice = useSelector((state) => state.page);
   console.log()
@@ -29,4 +29,4 @@ const NextPage = () => {
   )
 }
 
-export default NextPage
+export default Pages
