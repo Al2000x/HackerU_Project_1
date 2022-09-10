@@ -4,3 +4,9 @@
 .lightTheme{
     color: white;
 }
+
+.dropdown-custom {
+    background: none;
+    border:none;
+    color:gray;
+}   

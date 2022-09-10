@@ -1,9 +1,9 @@
 import React from "react";
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import {Link} from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useDispatch} from "react-redux";
 import { dropdownItemsArray } from "../features/games/dropdown-category";
+import { Dropdown } from "react-bootstrap";
+import DropdownItem from "react-bootstrap/esm/DropdownItem";
 
 
 
@@ -12,11 +12,16 @@ const DropdownCategories = () => {
     const dispatch = useDispatch();
     const nav = useNavigate()
   return (
-    <button style={{ background: "black" }}>
-      categories
-      <NavDropdown  label="categories" className="shadow" id="basic-nav-dropdown">
+      
+        <Dropdown>
+         <Dropdown.Toggle className="dropdown-custom" variant="success" id="dropdown-basic">
+        Dropdown Button
+      </Dropdown.Toggle>
+      hello
+      <Dropdown.Menu>
+
       {dropdownItemsArray.map(item=>
-        <NavDropdown.Item key={item.navCategory} >
+        <DropdownItem key={item.navCategory} >
         <div
           className="nav-link text-dark"
           onClick={() => {
@@ -25,12 +30,15 @@ const DropdownCategories = () => {
           }}>
           {item.navCategory}
         </div>
-       </NavDropdown.Item>
+       </DropdownItem>
         )}
+      </Dropdown.Menu>
+
       
 
-      </NavDropdown>
-    </button>
+      </Dropdown>
+
+
   );
 };
 

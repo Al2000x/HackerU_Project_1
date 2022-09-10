@@ -1,0 +1,53 @@
+.block {
+    position: relative;
+    margin: 50px auto 0;
+    width: 1024px;
+    height: 720px;
+    background: linear-gradient(0deg, #000, #272727);
+    padding: 5rem;
+  }
+  
+  .block:before, .block:after {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
+      #0000ff, #00ff00,#ffff00, #ff0000);
+    background-size: 400%;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    z-index: -1;
+    animation: steam 20s linear infinite;
+  }
+  
+  @keyframes steam {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  .block:after {
+    filter: blur(50px);
+  }
+  .gameDetailImg{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    bottom:3.5rem ;
+  }
+  .GameDetailHeading{
+    text-align: center;
+    position: relative;
+    bottom:4rem ;
+    color: white;
+  }
+  .informationDiv{
+    height: 30vh;
+  }

@@ -1,12 +1,18 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-initialState = { favorite: [] }
-const FavoriteSlice = createSlice({
+const initialState = {
+favorite: [],
+error:'',
+loading: false
+}
+
+const FavoriteSlice = createSlice({ 
     name:"favorite",
     initialState,
     reducers:{
-        addFavorite(state, {payload}){
-            state.favorite.push()
-        }
+        toggleFavorite: (state, { payload }) => {
+            state.movies.findIndex(m => m.id === payload)
+        },
+        
     }
 })

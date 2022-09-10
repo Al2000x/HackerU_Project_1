@@ -15,7 +15,3 @@ export const {changeTheme} = ThemeSlice.actions
 export default ThemeSlice.reducer
 
 
-// <img onClick={()=>{
-//                 dispatch(changeTheme())
-//               }} src={state ? darkImg : lightImg }/>
-
