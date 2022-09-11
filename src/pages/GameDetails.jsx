@@ -1,13 +1,26 @@
 import React, { useEffect } from 'react'
 import { Navigate, useLocation } from 'react-router'
 import '../componets/GameDetails.css'
-import img from '../media/gamestick_dark_mode.png'
 
+import { useState } from 'react'
 const GameDetails = () => {
+  const [data, setData] = useState()
 
   const location = useLocation()
   const game = location.state
-  return game ?  (
+  const gameKey = game.id
+ 
+
+  useEffect(() => {
+    fetch(
+      `https://api.rawg.io/api/games/${gameKey}?key=71784e53f40a45f2a050c08e5f49c2c1`
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        setData(data);
+      });
+  }, []);
+  return game ? (
    <div>
 
     <div className="block">
@@ -18,7 +31,21 @@ const GameDetails = () => {
    <div style={{ 
       backgroundImage: `url(${game.short_screenshots.image})` 
     }}>
-      <h3>{game.tags[1].name}</h3>
+      <h3>{game.tags[0].name}</h3>
+    </div>
+    <div>
+    {data ? ( <div>
+      <p>
+      {(data.id)}
+        </p>
+        <h4>
+      {(data.description)}
+        </h4>
+     
+    </div>) : null}
+    </div>
+    <div>
+     
     </div>
       </div>
 
