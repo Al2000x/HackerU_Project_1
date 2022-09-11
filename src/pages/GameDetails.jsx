@@ -38,6 +38,8 @@ const GameDetails = () => {
       <p>
       {(data.id)}
         </p>
+        {(data.platforms.filter((p)=>p.requirements!=null)[0].requirements.minimum)}<br/>
+        {(data.platforms.filter((p)=>p.requirements!=null)[0].requirements.recommended)}
         <h4>
       {(data.description)}
         </h4>
