@@ -15,5 +15,5 @@ const PageSlice = createSlice({
         }
     }
 })
-export default PageSlice.reducer
+export default PageSlice.reducer 
 export const {nextPage, previousPage} = PageSlice.actions

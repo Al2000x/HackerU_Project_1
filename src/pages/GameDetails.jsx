@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { Navigate, useLocation } from 'react-router'
 import '../componets/GameDetails.css'
+import DOMPurify from 'dompurify'
 
 import { useState } from 'react'
 const GameDetails = () => {
@@ -41,7 +42,8 @@ const GameDetails = () => {
         {(data.platforms.filter((p)=>p.requirements!=null)[0].requirements.minimum)}<br/>
         {(data.platforms.filter((p)=>p.requirements!=null)[0].requirements.recommended)}
         <h4>
-      {(data.description)}
+
+      <div dangerouslySetInnerHTML={{__html: DOMPurify.sanitize(data.description)}}/>
         </h4>
      
     </div>) : null}

@@ -11,7 +11,7 @@ import Home from "./pages/Home";
 
 function App() {
   return (
-    <div className="container ">
+      <div className="container">
       <TopNav></TopNav>
       <Routes>
         <Route path="/" element={<Home/>}></Route>
