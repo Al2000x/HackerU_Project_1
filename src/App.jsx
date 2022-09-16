@@ -11,6 +11,8 @@ import Home from "./pages/Home";
 
 function App() {
   return (
+    <div className="appWrapper">
+
       <div className="container">
       <TopNav></TopNav>
       <Routes>
@@ -24,6 +26,9 @@ function App() {
         {/* <Route path="/games/:gameId" element={<GameDetails/>}></Route> */}
       </Routes>
     </div>
+    </div>
+
+
   );
 }
 

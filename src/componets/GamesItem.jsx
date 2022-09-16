@@ -25,7 +25,7 @@ const GamesItem = ({category}) => {
               <h5 className="card-title">{game.name} </h5>
               <p className="card-text">{game.rating}</p>
               <button onClick={()=>{
-                dispatch(toggleFavorite(game.id))  
+                // dispatch(toggleFavorite(game.id))  
               }}></button>
               <Link to={'/gameDetails'} state={game}>
                 Show details

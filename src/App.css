@@ -5,8 +5,13 @@
     color: white;
 }
 
+
 .dropdown-custom {
     background: none;
     border:none;
     color:gray;
 }   
+.appWrapper{
+ min-height: 100vh;
+    background: grey;
+}
