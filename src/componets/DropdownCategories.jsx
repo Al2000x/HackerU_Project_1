@@ -14,10 +14,9 @@ const DropdownCategories = () => {
   return (
       
         <Dropdown>
-         <Dropdown.Toggle className="dropdown-custom" variant="success" id="dropdown-basic">
-        Dropdown Button
+         <Dropdown.Toggle className="nav-link custom-dropdown">
+        Browes Categories
       </Dropdown.Toggle>
-      hello
       <Dropdown.Menu>
 
       {dropdownItemsArray.map(item=>

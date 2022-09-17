@@ -1,14 +1,14 @@
 import React from "react";
 import "./Navbar.css";
-import { useDispatch, useSelector } from "react-redux";
 import Swal from "sweetalert2";
 import DropdownCategories from "./DropdownCategories";
-import { changeTheme } from "../features/theme/theme-toggle-slice";
-import { Link} from "react-router-dom";
 import darkToggle from "../media/dark.png";
 import lightToggle from "../media/light.png";
 import darkLoggo from "../media/gamestick_dark_mode.png";
 import lightLoggo from "../media/gamestick_light_mode.png";
+import { useDispatch, useSelector } from "react-redux";
+import { changeTheme } from "../features/theme/theme-toggle-slice";
+import { Link} from "react-router-dom";
 import {Navbar} from "react-bootstrap";
 
 

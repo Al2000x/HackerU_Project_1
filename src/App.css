@@ -6,12 +6,27 @@
 }
 
 
-.dropdown-custom {
-    background: none;
-    border:none;
-    color:gray;
-}   
+ 
 .appWrapper{
  min-height: 100vh;
     background: grey;
+}  
+a{
+    color: white;
+    text-decoration: none; 
+}
+.custom-dropdown{
+    background: inherit;
+    border:solid 0px;
+    text-shadow: 0 0 10px black;
+}
+.custom-dropdown:hover{
+    background: inherit;
+
+}
+.custom-dropdown:enabled{
+    background: inherit;
+}
+.custom-dropdown:active{
+    outline:solid red;
 }
