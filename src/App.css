@@ -27,6 +27,3 @@ a{
 .custom-dropdown:enabled{
     background: inherit;
 }
-.custom-dropdown:active{
-    outline:solid red;
-}

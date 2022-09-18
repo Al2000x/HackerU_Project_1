@@ -5,15 +5,43 @@
     rgb(49, 29, 63) 100%
   );
 }
-.btn-custom {
+.user-false {
   background: rgb(226, 62, 87);
-  width: 150px;
-  border-radius: 25px;
   height: 40px;
+  /* border-radius: 40px; */
   color: white;
   border: solid rgb(226, 62, 87);
+  width: 100px;
+  border-radius: 40px ; 
 }
-.btn-custom:hover {
+.user-true-left{
+  background: rgb(226, 62, 87);
+  height: 40px;
+  /* border-radius: 40px; */
+  color: white;
+  border: solid rgb(226, 62, 87);
+  width: 70px;
+  border-radius: 40px 0px 0px 40px;
+  
+}
+.user-true-right{
+  background: rgb(226, 62, 87);
+  height: 40px;
+  /* border-radius: 40px; */
+  color: white;
+  border: solid rgb(226, 62, 87);
+  width: 70px;
+  border-radius: 0px 40px 40px 0px;
+}
+.user-false:hover {
+  color: rgb(226, 62, 87);
+  background: rgb(136, 48, 78);
+}
+.user-true-right:hover {
+  color: rgb(226, 62, 87);
+  background: rgb(136, 48, 78);
+}
+.user-true-left:hover {
   color: rgb(226, 62, 87);
   background: rgb(136, 48, 78);
 }
