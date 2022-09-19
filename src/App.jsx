@@ -9,7 +9,7 @@ import LoginLogout from "./pages/LoginLogout";
 import TopNav from "./componets/TopNav";
 import Home from "./pages/Home";
 import Profile from "./pages/Profile";
-import Test from "./componets/Test";
+import GeneralGames from "./componets/GeneralGames";
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
         <Route path="/category/:id" element={<GamesList/>} ></Route>
         <Route path="/favorites" element={<Favorites/>}></Route>
         <Route path="/about" element={<About/>}></Route>
-        <Route path="/test" element={<Test/>}></Route>
+        <Route path="/general-games" element={<GeneralGames/>}></Route>
         <Route path="/login" element={<LoginLogout/>}></Route>
         <Route path="/*" element={<NotFound404/>}></Route>
         <Route path='/gameDetails' element={<GameDetails/>}></Route>

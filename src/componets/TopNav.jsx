@@ -11,6 +11,7 @@ import { changeTheme } from "../features/theme/theme-toggle-slice";
 import { Link } from "react-router-dom";
 import { Navbar } from "react-bootstrap";
 import { selectUser, logout } from "../features/user/userSlice";
+import SearchBar from "./SearchBar";
 
 const TopNav = () => {
   const user = useSelector(selectUser);
@@ -42,6 +43,7 @@ const TopNav = () => {
           }
         >
           &nbsp;&nbsp;&nbsp; Game Informer
+          <SearchBar></SearchBar>
         </h3>
       </Link>
       <div className="flex-grow-1"></div>

@@ -2,7 +2,7 @@ import React from 'react'
 import useAllGames from './useAllGames'
 import { useEffect } from 'react'
 
-const Test = () => {
+const GeneralGames = () => {
      const games = useAllGames(100)
     useEffect(() => {
         if(!games)
@@ -15,4 +15,4 @@ const Test = () => {
     )
   }
 
-export default Test
+export default GeneralGames
