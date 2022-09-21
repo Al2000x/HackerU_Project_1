@@ -1,14 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = { foundgame:[] }
+const initialState = { foundgame:null}
 const SpecificGame = createSlice({
     name:"specific game",
     initialState,
     reducers:{
-        DisplayGame(state){
-            state.foundgame.push()
-            console.log(state.foundgame)
-            console.log("first")
+        DisplayGame(state, action){
+           state.foundgame=action.payload
+           console.log(state.foundgame)
         }
     }
 })

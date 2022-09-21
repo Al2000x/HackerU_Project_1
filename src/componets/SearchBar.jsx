@@ -1,22 +1,21 @@
-import React,{useState} from 'react'
+import React, {useState} from 'react'
 import useAllGames from './useAllGames';
+import { useDispatch } from 'react';
+import { DisplayGame } from '../features/games/specific-game';
 
 const SearchBar = () => {
+  const dispastch = useDispatch();
     const specificGame =  useAllGames(1)
     const [text,setText]=useState("");
     console.log(text)
-
-    let arr = [{name: 'moshe'},{name:'israel'}];
-    
-
     const handleSreach = ()=>{
 const findName = specificGame.find(val=> val.slug.toLowerCase() === text.toLowerCase());
-if(!findName){
-    console.log(specificGame)
+if(!findName){ 
     return;
 }
-console.log(findName) //{}
+dispastch(DisplayGame(findName))
     }
+    
   return (
     <div>
         <input type="text" onChange={(e)=>{setText(e.target.value.trim())}} name="text" value={text} />
