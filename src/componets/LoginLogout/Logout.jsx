@@ -1,6 +1,6 @@
-import zelda from '../media/zelda.png'
+import zelda from '../../media/zelda.png'
 import { Link } from "react-router-dom";
-import { selectUser } from "../features/user/userSlice";
+import { selectUser } from "../../features/user/userSlice";
 import {  useSelector } from 'react-redux';
 const Logout = () => {
   const user = useSelector(selectUser)

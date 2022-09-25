@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
-import { Navigate, useLocation } from "react-router";
-import "../css_work/GameDetails.css";
 import DOMPurify from "dompurify";
+import "../css_work/GameDetails.css";
+import { Navigate, useLocation } from "react-router";
+import React, { useEffect } from "react";
 
 import { useState } from "react";
 const GameDetails = () => {

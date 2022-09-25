@@ -1,14 +1,9 @@
 import React from "react";
+import DropdownItem from "react-bootstrap/esm/DropdownItem";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector} from "react-redux";
 import { dropdownItemsArray } from "../../features/games/dropdown-category";
 import { Dropdown } from "react-bootstrap";
-import DropdownItem from "react-bootstrap/esm/DropdownItem";
-
-
-
-
-
 const DropdownCategories = () => {
     const selectTheme = useSelector(state=>state.theme)
     const dispatch = useDispatch();

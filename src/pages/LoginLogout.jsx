@@ -1,6 +1,6 @@
 import React from "react";
-import Login from "../componets/Login";
-import Logout from "../componets/Logout";
+import Login from "../componets/LoginLogout/Login";
+import Logout from "../componets/LoginLogout/Logout";
 import "../css_work/Login.css";
 import "../css_work/Logout.css";
 import { useSelector } from "react-redux";
@@ -17,13 +17,4 @@ const LoginLogout = () => {
     </>
   );
 };
-
 export default LoginLogout;
-// <div>
-//   <section>
-//     <div>
-//       <img src="" alt="" />
-//       <h2></h2>
-//       <input type="text" /><button></button></div>
-//   </section>
-// </div>
