@@ -2,10 +2,7 @@ import React, { useEffect }from 'react'
 import { useGenres} from '../app/store/gamesData'
 import {Link} from 'react-router-dom'
 import { useSelector } from 'react-redux'
-
-
-
-import './item.css'
+import '../css_work/item.css'
 
 const GamesItem = ({category}) => {
   const nextP = useSelector(state =>state.page.pNum)

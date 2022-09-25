@@ -1,5 +1,5 @@
 import React from "react";
-import "./Navbar.css";
+import "../css_work/Navbar.css";
 import Swal from "sweetalert2";
 import DropdownCategories from "./DropdownCategories";
 import darkToggle from "../media/dark.png";

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Navigate, useLocation } from "react-router";
-import "../componets/GameDetails.css";
+import "../css_work/GameDetails.css";
 import DOMPurify from "dompurify";
 
 import { useState } from "react";

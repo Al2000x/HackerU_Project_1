@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { selectUser } from '../features/user/userSlice'
-import '../componets/Profile.css'
+import '../css_work/Profile.css'
 const Profile = () => {
     const user = useSelector(selectUser)
   return (
