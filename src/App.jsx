@@ -10,10 +10,14 @@ import TopNav from "./componets/TopNav";
 import Home from "./pages/Home";
 import Profile from "./pages/Profile";
 import GeneralGames from "./componets/GeneralGames";
+import { useSelector } from "react-redux";
+
 
 function App() {
+  const themeSelect = useSelector(state=>state.theme)
   return (
-    <div className="appWrapper">
+    // className="appWrapper darkTheme"
+    <div  className={themeSelect.dark? "appWrapper darkTheme":"appWrapper lightTheme"}>
 
       <div className="container">
       <TopNav></TopNav>

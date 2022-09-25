@@ -48,7 +48,7 @@
 .game-informer-dark {
   position: relative;
   top: 6px;
-  text-shadow: 0 0 10px #ffffff;
+  text-shadow: 0 0 10px #000000;
   color: #ffffff;
 }
 .game-informer-light {
@@ -58,10 +58,13 @@
   color: #000000;
 }
 .navbar-light {
+  text-shadow: 0 0 10px #ffffff;
+}
+.navbar-dark {
   text-shadow: 0 0 10px #000000;
 }
 .swal2-popup.dark {
-  background: grey !important;
+  background:#202124 ;
   color: white;
   -webkit-box-shadow: 5px 5px 15px 5px #ff8080, -9px 5px 15px 5px #ffe488,
     -7px -5px 15px 5px #8cff85, 12px -5px 15px 5px #80c7ff,

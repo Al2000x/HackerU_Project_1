@@ -49,6 +49,9 @@ const TopNav = () => {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <div>
+          
+        </div>
+        <div>
           <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <ul className="navbar-nav ">
               <li className="nav-item active">
@@ -64,7 +67,7 @@ const TopNav = () => {
 
               <DropdownCategories />
               <li className="nav-item">
-                <Link className="nav-link" to="/about">
+                <Link className="nav-link hoverWrapper" to="/about">
                   About
                 </Link>
               </li>

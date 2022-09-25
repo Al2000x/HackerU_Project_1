@@ -1,24 +1,29 @@
 import React, {useState} from 'react'
 import useAllGames from './useAllGames';
-import { useDispatch } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { DisplayGame } from '../features/games/specific-game';
 
 const SearchBar = () => {
+  const gameSelector = useSelector((state)=>state.specific)
   const dispastch = useDispatch();
-    const specificGame =  useAllGames(1)
+    const specificGame =  useAllGames(100)
     const [text,setText]=useState("");
-    console.log(text)
+
     const handleSreach = ()=>{
-const findName = specificGame.find(val=> val.slug.toLowerCase() === text.toLowerCase());
+const findName = specificGame.find(val=> val.name.toLowerCase() === text.toLowerCase().trim());
+
 if(!findName){ 
     return;
 }
+if(findName !== gameSelector.foundgame)
 dispastch(DisplayGame(findName))
     }
     
   return (
     <div>
-        <input type="text" onChange={(e)=>{setText(e.target.value.trim())}} name="text" value={text} />
+        <input type="text" onChange={(e)=>{
+         setText(e.target.value)
+          }} name="text" value={text} />
         <button onClick={handleSreach}>submit</button>
     </div>
   )

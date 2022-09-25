@@ -1,15 +1,19 @@
 .darkTheme{
-    color: black;
+    color: white;
+    background: #202124;
 }
 .lightTheme{
-    color: white;
+    color: black;
+}
+.hoverWrapper:focus{
+    color:(222, 107, 107);
 }
 
 
  
 .appWrapper{
  min-height: 100vh;
-    background: grey;
+    
 }  
 a{
     color: white;
@@ -22,6 +26,7 @@ a{
 }
 .custom-dropdown:hover{
     background: inherit;
+    color: rgb(222, 107, 107);
 
 }
 .custom-dropdown:enabled{
