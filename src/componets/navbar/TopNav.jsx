@@ -1,5 +1,5 @@
 import React from "react";
-import "../../css_work/Navbar.css"
+import "../../css_work/Navbar.css";
 import MiddleLinks from "./MiddleLinks";
 import { useSelector } from "react-redux";
 import { Navbar } from "react-bootstrap";
@@ -17,15 +17,15 @@ const TopNav = () => {
           ? "navbar navbar-expand-lg p-3 navbar-bg navbar-dark d-flex"
           : "navbar navbar-expand-lg p-3 navbar-bg navbar-light d-flex"
       }
-      >
-      <LeftSideNav/>
+    >
+      <LeftSideNav />
       <div className="flex-grow-1"></div>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
-      <MiddleLinks/>
-      <div className="flex-grow-1 spacer"></div>
-      <RightSideNav/>    
-        </Navbar.Collapse>
+        <MiddleLinks />
+        <div className="flex-grow-1 spacer"></div>
+        <RightSideNav />
+      </Navbar.Collapse>
     </Navbar>
   );
 };
