@@ -13,7 +13,7 @@ const GameDetails = () => {
 
   useEffect(() => {
     fetch(
-      `https://api.rawg.io/api/games/${gameKey}?key=71784e53f40a45f2a050c08e5f49c2c1`
+      `https://api.rawg.io/api/games/${gameKey}?key=6c94fd57d797402f9b6628980ff9dc14`
     )
       .then((response) => response.json())
       .then((data) => {

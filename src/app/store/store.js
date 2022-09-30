@@ -14,8 +14,6 @@ const store = configureStore({
         user: userReducer,
         genre: genreReducer, 
         specific : specificReducer, 
-      
-
     }
 });
 export default store

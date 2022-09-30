@@ -12,8 +12,12 @@ const PageSlice = createSlice({
         previousPage(state){
             state.pNum--
             console.log(state.pNum)
+        },
+        pageDefaulter(state){
+            state.pNum=1
+            console.log(state.pNum)
         }
     }
 })
 export default PageSlice.reducer 
-export const {nextPage, previousPage} = PageSlice.actions
+export const {nextPage, previousPage, pageDefaulter} = PageSlice.actions

@@ -1,7 +1,7 @@
   import { useEffect } from 'react'
   import { useState } from 'react'
 async function getAllGames(amount) {
-    const nextPage = (i) => `https://api.rawg.io/api/games?key=71784e53f40a45f2a050c08e5f49c2c1&page_size=40&page=${i}`
+    const nextPage = (i) => `https://api.rawg.io/api/games?key=6c94fd57d797402f9b6628980ff9dc14&page_size=40&page=${i}`
     const pArray = []
     for(let i = 1; i <= amount;i++) 
         pArray.push(fetch(nextPage(i)))
@@ -20,7 +20,7 @@ const useAllGames = (amountOfPages) => {
             setGames(gamesResult)
         })()
       }, []);
-      return games
+      return {games}
 }
 
   // const Test = () => {

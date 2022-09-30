@@ -14,7 +14,7 @@ const RightSideNav = () => {
     <>
     {/* theme changer swal */}
     <img
-              onClick={() => {
+         onClick={() => {
                 {
                   selectTheme.dark
                     ? Swal.fire(`light theme`)
@@ -56,7 +56,7 @@ const RightSideNav = () => {
                   </Link>
                 </div>
               )}
-            </div>
+         </div>
     </>
   )
 }

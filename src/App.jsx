@@ -10,6 +10,7 @@ import TopNav from "./componets/navbar/TopNav";
 import Home from "./pages/Home";
 import Profile from "./pages/Profile";
 import GeneralGames from "./componets/GeneralGames";
+import Discover from "./pages/Discover";
 import { useSelector } from "react-redux";
 
 
@@ -25,6 +26,7 @@ function App() {
         <Route path="/" element={<Home/>}></Route>
         <Route path="/category/:id" element={<GamesList/>} ></Route>
         <Route path="/favorites" element={<Favorites/>}></Route>
+        <Route path="/discover" element={<Discover/>}></Route>
         <Route path="/about" element={<About/>}></Route>
         <Route path="/general-games" element={<GeneralGames/>}></Route>
         <Route path="/login" element={<LoginLogout/>}></Route>
