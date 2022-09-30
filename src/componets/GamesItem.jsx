@@ -1,5 +1,5 @@
 import React, { useEffect }from 'react'
-import { useGenres} from '../app/store/gamesData'
+import { useGenres} from '../app/custom_hooks/gamesData'
 import {Link} from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import '../css_work/item.css'
