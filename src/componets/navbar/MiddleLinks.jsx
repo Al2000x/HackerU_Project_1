@@ -7,7 +7,8 @@ const MiddleLinks = () => {
     const dispatch = useDispatch()
   return (
     <div>
-        <div className="collapse navbar-collapse" id="navbarNavDropdown">
+
+        <div id="navbarNavDropdown">
             <ul className="navbar-nav ">
                 <li className="nav-item active">
                 <Link to="/" className="nav-link custom-dropdown darkTheme">

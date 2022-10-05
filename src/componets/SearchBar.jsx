@@ -30,7 +30,7 @@ const SearchBar = () => {
         name="text"
         value={text}
       />
-      <button onClick={handleSreach}>submit</button>
+      <button onClick={handleSreach()}>submit</button>
     </div>
   );
 };

@@ -23,6 +23,7 @@ const TopNav = () => {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <MiddleLinks />
+
         <div className="flex-grow-1 spacer"></div>
         <RightSideNav />
       </Navbar.Collapse>

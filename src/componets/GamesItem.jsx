@@ -1,5 +1,5 @@
 import React, { useEffect }from 'react'
-import { useGenres} from '../app/custom_hooks/gamesData'
+import { useGenres} from '../app/custom_hooks/useGenres'
 import {Link} from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import '../css_work/item.css'
@@ -8,8 +8,6 @@ const GamesItem = ({category}) => {
   const nextP = useSelector(state =>state.page.pNum)
   useEffect(() => {
   }, [])
-
- 
     const [games] = useGenres(nextP,category)
     return games ? (
         <div className="item-Grid">
@@ -29,7 +27,6 @@ const GamesItem = ({category}) => {
                 Show details
               </Link>
               </button>
-              {/* < href="/" className="btn btn-primary">Show more details</NavLink> */}
             </div>
           </div>)
             })}

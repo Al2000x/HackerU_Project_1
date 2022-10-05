@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = { foundgame:null}
+const initialState = { foundgame:""}
 const SpecificGame = createSlice({
     name:"specific game",
     initialState,
