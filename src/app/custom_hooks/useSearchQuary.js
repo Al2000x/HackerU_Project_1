@@ -8,7 +8,7 @@ export const useSearchQuary = (query) => {
     if(!query)return
       axios({
         method:"get",
-        url:(`https://api.rawg.io/api/games?key=6c94fd57d797402f9b6628980ff9dc14&&search=${query}`)
+        url:(`https://api.rawg.io/api/games?key=71784e53f40a45f2a050c08e5f49c2c1&&search=${query}`)
       })
       .then(res=>{
         const result = res.data.results

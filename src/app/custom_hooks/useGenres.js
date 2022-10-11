@@ -3,7 +3,7 @@ export const useGenres = (page_number, genre) => {
   const [games, setGames] = useState(null);
   useEffect(() => {
     fetch(
-      `https://api.rawg.io/api/games?key=6c94fd57d797402f9b6628980ff9dc14&page_size=20&page=${page_number}&genres=${genre}`
+      `https://api.rawg.io/api/games?key=71784e53f40a45f2a050c08e5f49c2c1&page_size=20&page=${page_number}&genres=${genre}`
     )
       .then((response) => response.json())
       .then((data) => {

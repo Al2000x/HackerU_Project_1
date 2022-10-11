@@ -8,8 +8,7 @@ import { useSearchQuary } from "../app/custom_hooks/useSearchQuary";
 // state dependent component
 // type script
 const SearchBar = () => {
-  const gameSelector = useSelector((state) => state.specific);
-  const specificGame = useAllGames(100);
+  const gameSelector = useSelector((state) => state.specific)
   const [text , setText] = useState();
   const [results] = useSearchQuary(text)
   const handleSubmit= (text)=>{

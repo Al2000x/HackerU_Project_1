@@ -5,12 +5,13 @@ import { useSelector } from 'react-redux'
 
 const AllGames = () => {
     const pageNum = useSelector(state => state.page.pNum)
-   const {games}= useAllGames(pageNum)
+   const [{games}]= useAllGames(pageNum)
   return (
     <div className="item-Grid">
         
     {games && games.map(game=>{
   return(
+    
     <div key={game.id} className="card" style={{width: '18rem'}}>
       <img className="card-img-top" src={game.background_image} alt="Card image cap"/>
       <div className="card-body ">
