@@ -12,4 +12,5 @@ const SpecificGame = createSlice({
     }
 })
 export default SpecificGame.reducer 
+export const ChosenGame = (state) => state.foundgame
 export const {DisplayGame} = SpecificGame.actions

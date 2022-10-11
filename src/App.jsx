@@ -1,5 +1,6 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
+import { useSelector } from "react-redux";
 import GamesList from "./pages/GamesList";
 import Favorites from "./pages/Favorites";
 import About from "./pages/About";
@@ -11,7 +12,7 @@ import Home from "./pages/Home";
 import Profile from "./pages/Profile";
 import GeneralGames from "./componets/GeneralGames";
 import Discover from "./pages/Discover";
-import { useSelector } from "react-redux";
+import SearchedGame from "./pages/searchedGame";
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
         <Route path="/login" element={<LoginLogout/>}></Route>
         <Route path="/*" element={<NotFound404/>}></Route>
         <Route path='/gameDetails' element={<GameDetails/>}></Route>
+        <Route path='/searched-game' element={<SearchedGame/>}></Route>
         {/* <Route path="/games/:gameId" element={<GameDetails/>}></Route> */}
         <Route path="/profile" element={<Profile/>}></Route>
       </Routes>

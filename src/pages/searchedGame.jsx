@@ -1,15 +1,14 @@
 import React from 'react'
 import SearchBar from '../componets/SearchBar'
 
-const Home = () => {
-  
+const SearchedGame = () => {
+    
   return (
     <div>
-      <h1>hello to our site</h1>
-      <SearchBar/>
-      
+        <SearchBar/>
+       
     </div>
   )
 }
 
-export default Home
+export default SearchedGame

@@ -1,28 +1,28 @@
 import React, { useState } from "react";
 import useAllGames from "./useAllGames";
-import { useDispatch, useSelector } from "react-redux";
-import { DisplayGame } from "../features/games/specific-game";
-import { nextPage } from "../features/games/page-slice";
+import { useSelector } from "react-redux";
+import { useSearchQuary } from "../app/custom_hooks/useSearchQuary";
 
+
+
+// state dependent component
+// type script
 const SearchBar = () => {
   const gameSelector = useSelector((state) => state.specific);
-  const dispatch = useDispatch();
   const specificGame = useAllGames(100);
-  const [text, setText] = useState("");
-  
-
-
+  const [text , setText] = useState();
+  const [results] = useSearchQuary(text)
+  const handleSubmit= (text)=>{
+    setText(text)
+  }
   return (
     <div>
       <input
         type="text"
-        onChange={(e) => {
-          setText(e.target.value);
-        }}
+        onChange={(e) => { handleSubmit(e.target.value)   }}
         name="text"
-        value={text}
       />
-      <button onClick={()=>{dispatch(nextPage())}}>submit</button>
+      {results && JSON.stringify(results.result)}
     </div>
   );
 };
