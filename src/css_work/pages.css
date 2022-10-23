@@ -1,0 +1,19 @@
+.pageToggle{
+    padding: 4.2rem 0 0 1.7rem ;
+    font-size: 2rem;
+    font-weight: 600;
+    width: 5rem;
+    height: 20vh;
+    border-radius: 25px;
+    background-color: rgb(226, 62, 87);
+    position: fixed;
+}
+.next-page{
+    top: 50vh;
+    right: 15vh;
+}
+.next-page-left{
+    
+    top: 50vh;
+    left: 15vh;
+}

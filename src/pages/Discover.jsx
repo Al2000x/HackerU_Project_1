@@ -1,11 +1,12 @@
 import React from 'react'
-import AllGames from '../componets/AllGames'
 import GeneralGames from '../componets/GeneralGames'
+import "../css_work/pages.css"
 import Pages from '../componets/Pages'
 const Discover = () => {
-  return <div>
-      <GeneralGames/>      
-      <Pages/>
+  return <div className='pageCustom'>
+      <GeneralGames/> 
+    
+      <Pages  />   
   </div>
 }
 

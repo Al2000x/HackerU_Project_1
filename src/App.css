@@ -8,7 +8,10 @@
 .hoverWrapper:focus{
     color:(222, 107, 107);
 }
-
+ul{
+    text-decoration: none;
+    list-style: none
+}
 
  
 .appWrapper{
@@ -22,11 +25,11 @@ a{
 .custom-dropdown{
     background: inherit;
     border:solid 0px;
-    text-shadow: 0 0 10px black;
+    text-shadow: 0 0 10px rgb(252, 252, 252);
 }
 .custom-dropdown:hover{
     background: inherit;
-    color: rgb(222, 107, 107);
+    color: rgb(255, 30, 30);
 
 }
 .custom-dropdown:enabled{

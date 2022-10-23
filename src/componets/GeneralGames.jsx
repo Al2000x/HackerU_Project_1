@@ -1,10 +1,7 @@
 import React from 'react'
 import useAllGames from './useAllGames'
-import { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
-
-
 const GeneralGames = () => {
   const pageNum = useSelector(state=>state.page)
      const [generalResult] = useAllGames(pageNum.pNum)
@@ -21,8 +18,7 @@ const GeneralGames = () => {
             <button  onClick={()=>{
               // dispatch(toggleFavorite(game.id))  
             }}></button>
-            <button className='glow-on-hover loginButton'>
-
+            <button  className='glow-on-hover loginButton card-button'>
             <Link to={'/gameDetails'} state={game}>
               Show details
             </Link>

@@ -10,6 +10,7 @@
 .card{
     padding: 1rem;
     margin-top: 1rem;
+    background:linear-gradient(grey ,black);
 }
 @media (max-width: 1399px) { 
     .card{
