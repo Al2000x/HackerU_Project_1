@@ -16,6 +16,9 @@
     .card{
         width: 250px !important;
     }
+    .buttonWidthChanger{
+        width: 155px !important;
+    }
     .card-img-top{
         height:45%;
     }
@@ -24,27 +27,39 @@
     .card{
         width: 190px !important;
     }
+    .buttonWidthChanger{
+        width: 125px !important;
+    }
  }
- @media (max-width: 991px) { 
+ @media (max-width: 1011px) { 
     .card{
         width: 250px !important;
     }
     .item-Grid{
         grid-template-columns: repeat(2,1fr);
     }
+    .buttonWidthChanger{
+        width: 190px !important;
+    }
  }
  @media (max-width: 767px) { 
    
     .card{
-        width: 250px !important;
+        width: 200px !important;
+    }
+    .buttonWidthChanger{
+        width: 135px !important;
     }
  }
- @media (max-width: 541px) { 
+ @media (max-width: 580px) { 
    
     .card{
         width: 250px !important;
     }
     .item-Grid{
         grid-template-columns: repeat(1,1fr);
+    }
+    .buttonWidthChanger{
+        width: 180px !important;
     }
  }

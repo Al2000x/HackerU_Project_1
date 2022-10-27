@@ -15,13 +15,13 @@ const Pages = () => {
          dispatch(previousPage())
        }
       }}>
-      <a className="next-page-left pageToggle ">◁</a>
+      <a className="next-page-left pageToggle "><span className='symbolRight'>◁</span></a>
     </li>
     <h5 className='m-1'>page: {PageSlice.pNum}</h5>
     <li className="page-item"onClick={()=>{
         dispatch(nextPage());
     }}>
-      <a className="pageToggle next-page" href="#">▷</a>
+      <a className="pageToggle next-page" href="#"><span className='symbolLeft'>▷</span></a>
     </li>
   </ul>
     </div>

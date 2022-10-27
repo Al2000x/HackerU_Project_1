@@ -17,3 +17,50 @@
     top: 50vh;
     left: 15vh;
 }
+@media (max-width: 1750px) { 
+    .next-page-left{ 
+        left: 7vh;
+    }
+    .next-page{
+        right: 7vh;
+    }
+
+ }
+ @media (max-width: 1580px) { 
+    .next-page-left{ 
+        left: 3vh;
+    }
+    .next-page{
+        right: 3vh;
+    }
+
+ }
+ @media (max-width: 1500px) { 
+    .pageToggle{
+        width: 3rem;
+        padding: 4.2rem 0 0 1.7rem ;
+    }
+    .symbolRight{
+        position: relative;
+        right: 1.2rem;
+    }  
+    .symbolLeft{
+        position: relative;
+        left: -0.8rem;
+    }  
+    .next-page-left{ 
+        left: 0vh;
+    }
+    .next-page{
+        right: 0vh;
+    }
+
+ }
+@media (max-width: 767px) { 
+  
+    .pageToggle{
+        width: 3rem;
+        padding: 4.2rem 0 0 1.7rem ;
+    }
+    
+}
