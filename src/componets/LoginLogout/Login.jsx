@@ -44,3 +44,17 @@ const Login = () => {
 };
 
 export default Login;
+{/* <form onSubmit={(e) => handleChange(e)}>         
+<input
+  value={name}
+  onChange={(e) => {
+    setText(e.target.value);
+  }}
+  className="mt-3 loginInput"
+  type="name"
+/>
+<br />
+<button type="submit" className="mt-3 glow-on-hover loginButton">
+ search your game
+</button>
+</form> */}

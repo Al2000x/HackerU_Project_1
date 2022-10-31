@@ -12,8 +12,12 @@ const FavoriteSlice = createSlice({
     reducers:{
         toggleFavorite: (state, { payload }) => {
            const indx = state.favorite.findIndex(game => game.id === payload.id)
-           state.favorite[indx] = !state.favorite[indx]
+           if(indx === -1) {
+                state.favorite = [...state.favorite, payload]
+           }else
+                state.favorite.splice(indx, 1)    
         },
-        
     }
 })
+export default FavoriteSlice.reducer
+export const {toggleFavorite} = FavoriteSlice.actions
