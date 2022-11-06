@@ -12,9 +12,11 @@ const FavoriteSlice = createSlice({
     reducers:{
         toggleFavorite: (state, { payload }) => {
            const indx = state.favorite.findIndex(game => game.id === payload.id)
+           console.log(state.favorite)
+            console.log(payload)
            if(indx === -1) {
-                state.favorite = [...state.favorite, payload]
-           }else
+               state.favorite = [...state.favorite, payload]
+           }else           
                 state.favorite.splice(indx, 1)    
         },
     }

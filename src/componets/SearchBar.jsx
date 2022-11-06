@@ -9,7 +9,7 @@ import { FiHeart } from "react-icons/fi";
 // type script
 const SearchBar = () => {
   const [btnActive, setBtnActive] = useState(false);  
-  const dispatch = useDispatch
+  const dispatch = useDispatch()
   const [text, setText] = useState();
   const [results] = useSearchQuary(text);
   const handleSubmit = (text) => {
