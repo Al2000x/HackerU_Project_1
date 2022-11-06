@@ -1,15 +1,17 @@
 import React, { useState } from "react";
-import useAllGames from "./useAllGames";
-import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import { useSearchQuary } from "../app/custom_hooks/useSearchQuary";
+import { useDispatch } from "react-redux";
+import { toggleFavorite } from "../features/games/favorite-games-slice";
+import { FiHeart } from "react-icons/fi";
 
 // state dependent component
 // type script
 const SearchBar = () => {
-  const gameSelector = useSelector((state) => state.specific);
+  const [btnActive, setBtnActive] = useState(false);  
+  const dispatch = useDispatch
   const [text, setText] = useState();
   const [results] = useSearchQuary(text);
-
   const handleSubmit = (text) => {
     setText(text);
   };
@@ -29,13 +31,16 @@ const SearchBar = () => {
               <div className="card-body ">
                 <h5 className="card-title">{game.name} </h5>
                 <p className="card-text">General rating: {game.rating}/5</p>
-                {/* <button  onClick={()=>{
-                dispatch(toggleFavorite(game.id))  
-              }}></button>                           */}
+         
+                {/* <Hearts isClick={isClick} onClick={() => setClick(!isClick)} /> */}
+                <button  onClick={()=> dispatch(toggleFavorite(game))}></button>
+                <div btnActive={btnActive} onClick={() => setBtnActive(!btnActive)} className='text-center mb-1'> 
+                <FiHeart  className={btnActive ? "heartActive":"heartInactive"} ></FiHeart>                         
+              </div>
                 <button className="glow-on-hover loginButton buttonWidthChanger">
-                  {/* <Link to={'/gameDetails'} state={game}>
+                  <Link to={'/gameDetails'} state={game}>
                 Show details
-              </Link> */}
+                </Link>
                 </button>
               </div>
             </div>

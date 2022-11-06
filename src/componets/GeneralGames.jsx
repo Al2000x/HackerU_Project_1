@@ -1,11 +1,13 @@
 import React from 'react'
 import useAllGames from './useAllGames'
+import { toggleFavorite } from '../features/games/favorite-games-slice'
+import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 const GeneralGames = () => {
   const pageNum = useSelector(state=>state.page)
      const [generalResult] = useAllGames(pageNum.pNum)
-    //  console.log(generalResult)
+     const dispatch = useDispatch();
     return generalResult ? (
       <div className="item-Grid">
           {generalResult.map(game=>{
@@ -16,7 +18,7 @@ const GeneralGames = () => {
             <h5 className="card-title">{game.name} </h5>
             <p className="card-text">General rating: {game.rating}/5</p>
             <button  onClick={()=>{
-              // dispatch(toggleFavorite(game.id))  
+              dispatch(toggleFavorite(game))  
             }}></button>
             <button  className='glow-on-hover loginButton card-button'>
             <Link to={'/gameDetails'} state={game}>

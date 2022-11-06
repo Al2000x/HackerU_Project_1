@@ -6,7 +6,7 @@ const useAllGames = (pageNum) => {
   useEffect(() => {
     axios({
       method:"get",
-      url: `https://api.rawg.io/api/games?key=81cb0fcca14b427e9a003d8259ba7c0b&page_size=40&page=${pageNum}`
+      url: `https://api.rawg.io/api/games?key=5b0cf7ee9af3428f8fd4844754db4b83&page_size=40&page=${pageNum}`
     })
     .then(res=>{
       const result = res.data.results

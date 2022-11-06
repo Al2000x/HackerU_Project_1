@@ -4,13 +4,44 @@
     justify-items: center;
 }
 .card-img-top{
-    height:50%;
+    height:200px;
     width: 100%;
 }
 .card{
     padding: 1rem;
     margin-top: 1rem;
     background:linear-gradient(grey ,black);
+}
+.heartInactive{
+    color: black;
+    opacity: 0.3;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;    
+}
+.heartActive{
+    fill: red;
+    color: red;
+    width: 30px;
+    height: 30px; 
+}
+@keyframes heartbeat{
+    0%{
+        transfom: scale(1);
+    }
+    50%{
+        transform:scale(1.25);        
+    }
+    100%{
+        transform:scale(1);
+    }
+}
+.heartInactive:hover{
+    animation: heartbeat 1s infinite;
+    fill: red;
+    color: red;
+    opacity: 1;
+    transition: opacity 500ms;
 }
 @media (max-width: 1399px) { 
     .card{
