@@ -1,19 +1,23 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-export const useSearchQuary = (query) => {
+export const useSearchQuery = (query) => {
   const [searchResults, setSearchResults] = useState(null)
 
  useEffect(() => {
-    if(!query)return
+    if(!query){
+      setSearchResults(null)
+      return
+    }
       axios({
         method:"get",
-        url:(`https://api.rawg.io/api/games?key=5b0cf7ee9af3428f8fd4844754db4b83&search=${query}}`)
+        url:(`https://api.rawg.io/api/games?key=71784e53f40a45f2a050c08e5f49c2c1&search=${query}}`)
       })
       .then(res=>{
         const result = res.data.results
-        // console.log(result) 
+        console.log(result)
         setSearchResults({result})
+
       }
       );
     }, [query])
