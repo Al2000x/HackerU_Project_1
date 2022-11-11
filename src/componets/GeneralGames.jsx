@@ -4,7 +4,7 @@ import { toggleFavorite } from '../features/games/favorite-games-slice'
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { FiHeart } from "react-icons/fi";
-import { useSelector } from 'react-redux'
+// import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 const GeneralGames = () => {
   const [btnActive, setBtnActive] = useState({});   //{1:true}

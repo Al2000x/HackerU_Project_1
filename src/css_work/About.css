@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Quicksand:wght@500&display=swap');
+.details{
+    font-family: 'Quicksand', cursive;
+    font-size: 35px;
+   
+}
+.details>h1:nth-child(1){
+    display: inli
+}
+
+.AlexPic{
+    height: 175px;
+    border-radius: 50px;
+    position: relative;
+    bottom: 50px;
+}
+.questionSide1{
+    background:  rgb(226, 62, 87);
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 25% 100%);
+    position: relative;
+    right: 14.5%;
+    width: 114.5%;
+    margin-top:1rem ;
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+    border: solid 7px rgb(49, 29, 63);
+
+}
+.answerSide1{
+    clip-path: polygon(0 0, 75% 0, 100% 100%, 0 100%);
+    background: rgb(49, 29, 63);
+    height: 20vh;
+    width: 114.5%;  
+    margin-top:1rem ;
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+    border: solid 7px rgb(226, 62, 87);
+
+
+}
+.infoDiv{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    height: 40vh;
+}
+.aboutSpacer{
+    margin-top:2rem ;
+}
+.questionSide{
+    background:  rgb(226, 62, 87);
+    border: solid 7px rgb(49, 29, 63);
+    
+    clip-path: polygon(25% 0, 100% 0%, 100% 100%, 0 100%);
+    position: relative;
+    right: 14.5%;
+    width: 114.5%;
+    margin-top:1rem ;
+    animation: 1s ease-out 0s 1 slideInFromRight;
+
+}
+.answerSide{ 
+    clip-path: polygon(0 0, 100% 0%, 75% 100%, 0 100%);
+    background: rgb(49, 29, 63);
+    height: 20vh; 
+    width: 114.5%;  
+    margin-top:1rem ;
+    animation: 1s ease-out 0s 1 slideInFromRight;
+    border: solid 7px rgb(226, 62, 87);
+
+}
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @keyframes slideInFromRight {
+    0% {
+      transform: translateX(200%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+

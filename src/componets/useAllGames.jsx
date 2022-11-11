@@ -45,9 +45,6 @@ export const GamesContextProvider = ({children}) => {
       {children}
   </GamesContext.Provider>
 }
-
-
-
 const useAllGames = () => {
     const context = useContext(GamesContext)
     return context

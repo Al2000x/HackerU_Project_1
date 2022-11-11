@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import { useSelector } from "react-redux";
 import GamesList from "./pages/GamesList";
 import Favorites from "./pages/Favorites";
-import About from "./pages/About";
+import Details from "./pages/Details";
 import GameDetails from "./pages/GameDetails";
 import NotFound404 from "./pages/NotFound404";
 import LoginLogout from "./pages/LoginLogout";
@@ -28,7 +28,7 @@ function App() {
         <Route path="/category/:id" element={<GamesList/>} ></Route>
         <Route path="/favorites" element={<Favorites/>}></Route>
         <Route path="/discover" element={<Discover/>}></Route>
-        <Route path="/about" element={<About/>}></Route>
+        <Route path="/about" element={<Details/>}></Route>
         <Route path="/general-games" element={<GeneralGames/>}></Route>
         <Route path="/login" element={<LoginLogout/>}></Route>
         <Route path="/*" element={<NotFound404/>}></Route>
