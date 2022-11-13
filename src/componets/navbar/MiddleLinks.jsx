@@ -17,7 +17,7 @@ const MiddleLinks = () => {
                 </Link>
                 </li>
                 <li className="nav-item">
-                <Link onClick={dispatch(pageDefaulter())} className="nav-link custom-dropdown darkTheme" to="/discover">
+                <Link  className="nav-link custom-dropdown darkTheme" to="/discover">
                     Discover All Games
                 </Link>
                 </li>

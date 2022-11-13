@@ -1,18 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Quicksand:wght@500&display=swap');
 .details{
     font-family: 'Quicksand', cursive;
-    font-size: 35px;
+   height: 100vh;
+}
+.infoDiv>div>h1{
+    padding-left: 5px;
    
 }
-.details>h1:nth-child(1){
-    display: inli
-}
-
 .AlexPic{
     height: 175px;
     border-radius: 50px;
     position: relative;
-    bottom: 50px;
+    bottom: 47px;
 }
 .questionSide1{
     background:  rgb(226, 62, 87);
@@ -22,7 +21,7 @@
     width: 114.5%;
     margin-top:1rem ;
     animation: 1s ease-out 0s 1 slideInFromLeft;
-    border: solid 7px rgb(49, 29, 63);
+    border: solid 5px rgb(49, 29, 63);
 
 }
 .answerSide1{
@@ -32,7 +31,7 @@
     width: 114.5%;  
     margin-top:1rem ;
     animation: 1s ease-out 0s 1 slideInFromLeft;
-    border: solid 7px rgb(226, 62, 87);
+    border: solid 5px rgb(226, 62, 87);
 
 
 }
@@ -40,14 +39,11 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
-    height: 40vh;
-}
-.aboutSpacer{
-    margin-top:2rem ;
+   
 }
 .questionSide{
     background:  rgb(226, 62, 87);
-    border: solid 7px rgb(49, 29, 63);
+    border: solid 5px rgb(49, 29, 63);
     
     clip-path: polygon(25% 0, 100% 0%, 100% 100%, 0 100%);
     position: relative;
@@ -57,6 +53,17 @@
     animation: 1s ease-out 0s 1 slideInFromRight;
 
 }
+.carousell{
+    position: relative;
+    left: 150px;
+    top: 45px;
+    width: 500px !important;
+    height: 50px;
+    
+}
+.carouselImg{
+    height: 50px;
+}
 .answerSide{ 
     clip-path: polygon(0 0, 100% 0%, 75% 100%, 0 100%);
     background: rgb(49, 29, 63);
@@ -64,7 +71,7 @@
     width: 114.5%;  
     margin-top:1rem ;
     animation: 1s ease-out 0s 1 slideInFromRight;
-    border: solid 7px rgb(226, 62, 87);
+    border: solid 5px rgb(226, 62, 87);
 
 }
 @keyframes slideInFromLeft {
@@ -83,4 +90,119 @@
       transform: translateX(0);
     }
   }
+  @media(max-width:1199px) {
+    .carousell{
+        top: 30px;
+        width: 400px !important;
+    }
+
+    .AlexPic{
+        height:150px ;
+        bottom: 35px;
+    }
+}
+    @media(max-width:991px) {
+        .infoDiv>div>h1{
+            font-size: 25px;
+        }
+        .AlexPic{
+            
+            bottom: 20px;
+        }
+        .carousell{
+            top: 45px;
+            width: 350px !important;
+            left:90px;
+        }
+  }
+  @media(max-width:913px) {
+    .infoDiv>div>h1{
+        font-size: 25px;
+    }
+    .AlexPic{
+        height: 150px;
+        bottom: 3px;
+    }
+}
+  @media(max-width:821px) {
+    
+    .AlexPic{
+        height: 150px;
+        bottom: 5px;
+    }
+    
+}
+  @media(max-width:768px) {
+    
+    .AlexPic{
+        height: 150px;
+        bottom: 10px;
+    }
+    .carousell{
+        left:50px;
+        top: 45px;
+        width: 250px !important;
+    }
+    
+}
+@media(max-width:540px) {
+    .carousell{
+        left:50px;
+        top: 30px;
+        width: 250px !important;
+    }
+    .AlexPic{
+        height: 100px;
+        bottom: 10px;
+    }
+    
+}
+@media(max-width:414px){
+    .AlexPic{
+        height: 120px ;
+        bottom: 1px;
+    }
+    .carousell{
+        left:70px;
+        top: 16px;
+        width: 50px !important;
+        
+    }
+}
+@media(max-width:375px){
+    .infoDiv>div>h1{
+        font-size: 15px;
+    }
+    .carousell{
+        left:70px;
+        top: 15px;
+        width: 50px !important;
+        
+    }
+    .AlexPic{        
+        height:95px ;
+        bottom: 5px;
+    }
+}
+@media(max-width:360px){
+    
+    .AlexPic{
+        height:100px ;
+        bottom: 5px;
+    }
+}
+@media(max-width:280px){
+    .carousell{
+        left:50px;
+        top: 15px;
+        width: 50px !important;
+        
+    }
+    .AlexPic{
+        height:90px ;
+        bottom: 5px;
+    }
+}
+
+
 

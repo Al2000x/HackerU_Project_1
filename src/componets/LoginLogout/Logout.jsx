@@ -12,7 +12,7 @@ const Logout = () => {
                take this {user.name} 
           </h3>
           <img src={zelda} width="500px"/><br />
-          <Link to={("/")}>
+          <Link to={("/profile")}>
           <button type="submit" className="mt-3 glow-on-hover loginButton">
             Begin journy
           </button>
