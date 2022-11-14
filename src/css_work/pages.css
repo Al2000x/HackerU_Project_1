@@ -9,12 +9,12 @@
     position: fixed;
 }
 .next-page{
-    top: 50vh;
+    top: 45vh;
     right: 15vh;
 }
 .next-page-left{
     
-    top: 50vh;
+    top: 45vh;
     left: 15vh;
 }
 @media (max-width: 1750px) { 

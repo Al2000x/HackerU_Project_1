@@ -13,6 +13,7 @@ import Profile from "./pages/Profile";
 import GeneralGames from "./componets/GeneralGames";
 import Discover from "./pages/Discover";
 import SearchedGame from "./pages/searchedGame";
+import Footer from "./componets/Footer";
 
 
 function App() {
@@ -37,7 +38,9 @@ function App() {
         {/* <Route path="/games/:gameId" element={<GameDetails/>}></Route> */}
         <Route path="/profile" element={<Profile/>}></Route>
       </Routes>
+      
     </div>
+    <Footer></Footer>
     </div>
 
 

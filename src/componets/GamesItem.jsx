@@ -12,8 +12,6 @@ const GamesItem = ({category}) => {
   const [btnActive, setBtnActive] = useState({});   //{1:true}
   const nextP = useSelector(state =>state.page.pNum)
   const dispatch = useDispatch();
-  useEffect(() => {
-  }, [])
   // console.log(faveGameArr)
     const [games] = useGenres(nextP,category)
 

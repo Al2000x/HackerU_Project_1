@@ -63,6 +63,7 @@
 }
 .carouselImg{
     height: 50px;
+    
 }
 .answerSide{ 
     clip-path: polygon(0 0, 100% 0%, 75% 100%, 0 100%);
@@ -90,10 +91,24 @@
       transform: translateX(0);
     }
   }
+  @media(max-width:1400px) {
+    .carousell{
+        top: 25px;
+        width: 500px !important;
+        left: 100px;
+    }
+    .axiosImg{
+        width: 150px;
+    }
+}
   @media(max-width:1199px) {
     .carousell{
         top: 30px;
         width: 400px !important;
+
+    }
+    .axiosImg{
+        width:100px ;
     }
 
     .AlexPic{
@@ -112,7 +127,7 @@
         .carousell{
             top: 45px;
             width: 350px !important;
-            left:90px;
+            left: 50px;
         }
   }
   @media(max-width:913px) {
@@ -140,15 +155,14 @@
     }
     .carousell{
         left:50px;
-        top: 45px;
-        width: 250px !important;
+        top: 20px;
+        width: 325px !important;
     }
     
 }
 @media(max-width:540px) {
     .carousell{
-        left:50px;
-        top: 30px;
+        left:35px;
         width: 250px !important;
     }
     .AlexPic{
@@ -163,10 +177,23 @@
         bottom: 1px;
     }
     .carousell{
-        left:70px;
-        top: 16px;
-        width: 50px !important;
+        left:35px;
+        top: 15px;
+        width: 165px !important;
         
+    }
+    .carouselImg{
+        height: 50px;
+        width: 50px;
+        
+    }
+}
+@media(max-width:390px){
+
+    .carousell{
+        left: 35px;
+
+        width: 165px !important;
     }
 }
 @media(max-width:375px){
@@ -174,10 +201,9 @@
         font-size: 15px;
     }
     .carousell{
-        left:70px;
         top: 15px;
-        width: 50px !important;
-        
+        width: 150px !important;
+        left: 20px;
     }
     .AlexPic{        
         height:95px ;
@@ -193,10 +219,8 @@
 }
 @media(max-width:280px){
     .carousell{
-        left:50px;
-        top: 15px;
-        width: 50px !important;
-        
+        top: 25px;
+        width: 115px !important;
     }
     .AlexPic{
         height:90px ;
