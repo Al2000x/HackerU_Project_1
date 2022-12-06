@@ -1,3 +1,4 @@
+
 .animate-charcter
 {
    text-transform: uppercase;
@@ -17,8 +18,27 @@
   -webkit-text-fill-color: transparent;
   animation: textclip 2s linear infinite;
   display: inline-block;
-      font-size: 190px;
+      font-size: 75px;
 }
+
+
+/* this is related to the pop up */
+.popup>h2,.popup>div{
+ color: black ;
+}
+.content{
+  font-size: 18px;
+}
+/* this is related to the pop up */
+.popup-btn{
+  background: rgb(226, 62, 87);
+  width: 100%;
+}
+.popup-btn:hover{
+  color: rgb(226, 62, 87);
+  background: rgb(136, 48, 78);
+}
+
 
 @keyframes textclip {
   to {
