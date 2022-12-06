@@ -1,7 +1,10 @@
 import { useState } from "react";
 import { login } from "../../features/user/userSlice";
 import { useDispatch } from "react-redux";
-
+/**
+ * This is the component that you see before you are logged into your account,
+ * With help from our user hook we store the info of the user for future use
+ */
 const Login = () => {
   const [name, setName] = useState("");
   const dispatch = useDispatch();

@@ -1,4 +1,8 @@
 import { useEffect, useState } from "react";
+/**
+ * this is the hook that helps us load all of the genre type games 
+ * from the dropdown menu
+ */
 export const useGenres = (page_number, genre) => {
   const [games, setGames] = useState(null);
   useEffect(() => {

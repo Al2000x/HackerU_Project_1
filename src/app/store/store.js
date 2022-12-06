@@ -6,7 +6,9 @@ import  genreReducer  from "../../features/games/category-slice";
 import specificReducer from "../../features/games/specific-game";
 import FavoriteSlice from "../../features/games/favorite-games-slice";
 
-
+/**
+ * here we connect all of the slices together
+ */
 
 const store = configureStore({
     reducer:{

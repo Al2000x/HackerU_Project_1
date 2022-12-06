@@ -1,11 +1,8 @@
 import React from 'react'
 import DropdownCategories from "./DropdownCategories";
 import { Link } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import { pageDefaulter } from '../../features/games/page-slice';
 
 const MiddleLinks = () => {
-    const dispatch = useDispatch()
   return (
     <div>
 

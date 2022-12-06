@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-
+/**
+ * this is the hook that helps us load all of the searh related results
+ * for example from the input
+ */
 export const useSearchQuery = (query) => {
   const [searchResults, setSearchResults] = useState(null)
 
