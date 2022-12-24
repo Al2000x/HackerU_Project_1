@@ -19,11 +19,6 @@ const MiddleLinks = () => {
                 </Link>
                 </li>
                 <DropdownCategories />
-                <li className="nav-item">
-                <Link className="nav-link custom-dropdown darkTheme" to="/about">
-                    About
-                </Link>
-                </li>
             </ul>
         </div>
     </div>

@@ -25,17 +25,15 @@ function App() {
       <div className="container">
       <TopNav></TopNav>
       <Routes>
-        <Route path="/" element={<Home/>}></Route>
+        <Route path="/"element={<Details/>}></Route>
         <Route path="/category/:id" element={<GamesList/>} ></Route>
         <Route path="/favorites" element={<Favorites/>}></Route>
         <Route path="/discover" element={<Discover/>}></Route>
-        <Route path="/about" element={<Details/>}></Route>
         <Route path="/general-games" element={<GeneralGames/>}></Route>
         <Route path="/login" element={<LoginLogout/>}></Route>
         <Route path="/*" element={<NotFound404/>}></Route>
         <Route path='/gameDetails' element={<GameDetails/>}></Route>
         <Route path='/searched-game' element={<SearchedGame/>}></Route>
-        {/* <Route path="/games/:gameId" element={<GameDetails/>}></Route> */}
         <Route path="/profile" element={<Profile/>}></Route>
       </Routes>
       
