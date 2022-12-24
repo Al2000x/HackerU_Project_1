@@ -26,7 +26,9 @@ const GamesItem = ({category}) => {
             <div key={game.id} className="card" style={{width: '18rem'}}>
               <img className="card-img-top" src={game.background_image} alt="Card image cap"/>
               <div className="card-body ">
+        
               <h5 className="card-title">{game.name} </h5>
+
               <p className="card-text">General rating: {game.rating}/5</p>
               <div  onClick={() => toggleActive(game)} className='text-center mb-1'> 
               <FiHeart  className={btnActive[game.id] ? "heartActive":"heartInactive"}  onClick={()=> dispatch(toggleFavorite(game))}></FiHeart>                         
