@@ -18,10 +18,8 @@
   -webkit-text-fill-color: transparent;
   animation: textclip 2s linear infinite;
   display: inline-block;
-      font-size: 75px;
+      font-size: 20px;
 }
-
-
 /* this is related to the pop up */
 .popup>h2,.popup>div{
  color: black ;
@@ -38,10 +36,58 @@
   color: rgb(226, 62, 87);
   background: rgb(136, 48, 78);
 }
+.pCarouselImg{
+  height: 500px;
+}
+.carouselDiv{
+  margin: 0 auto;
+  width: 50%;
+}
+.thumb img{
+  height: 100px;
+  width: 100px;
+}
+.control-dots{
+ margin: 50px 0 !important;
+}
+.control-arrow .control-prev{
 
-
+}
+.thumb{
+  width: 100px !important;
+}
 @keyframes textclip {
   to {
     background-position: 200% center;
   }
 }
+@media only screen and (max-width: 1400px) {
+.carouselDiv{
+  height: 400px !important;
+  
+}
+.control-dots{
+  margin: 10px 0 !important;
+ }
+.pCarouselImg{
+  height: 400px;
+}
+}
+@media only screen and (max-width: 1200px) {
+  .carouselDiv{
+    height: 300px !important;
+    
+  }
+  .pCarouselImg{
+    height: 300px;
+  }
+  }
+  @media only screen and (max-width: 992px) {
+    .carouselDiv{
+      height: 200px !important;
+      
+    }
+    .pCarouselImg{
+      height: 200px;
+    }
+    }

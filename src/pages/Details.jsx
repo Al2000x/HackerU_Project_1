@@ -63,11 +63,17 @@ const Details = () => {
             <img src={ProfilePic} className="AlexPic " alt="AlexPic" />
           </div>
         </div>
-        <div className="questionSide1 "></div>
+        <div className="questionSide1 ">
+          <h4 className="question-text1">Hello, my name is alex,<br /> And i'm the creator of this site,<br />  
+           I am learning js with react,<br />  and c sharp currently but <br />  branching into other stuff too! <br /> Tanks for stepping by!
+          </h4>
+        </div>
         <div className="answerSide ">
           <h1>What is this site?</h1>
         </div>
-        <div className="questionSide"></div>
+        <div className="questionSide">
+          <h4 className="question-text2">this is my first project on creating a website <br /> although still not connected to a DB added, <br />Also this site serves for alot of experimenting</h4>
+        </div>
       </div>
 
       <div className="infoDiv">
@@ -75,8 +81,8 @@ const Details = () => {
           <h1>
             what softwares <br /> were used on this site?
             <br />
-            scroll between them!{" "}
-            <span className="fs-6 text">*psst try to click on them</span>
+            scroll between them!
+            <span className="fs-6 text"><br />*psst try to click on them</span>
           </h1>
 
           <div className="text-center picDiv"></div>
@@ -94,7 +100,11 @@ const Details = () => {
         <div className="answerSide">
           <h1>Want to stalk me?</h1>
         </div>
-        <div className="questionSide"></div>
+        <div className="questionSide ">
+          <h4 className="question-text2" >
+            you can follow all of my socials through the <br />links in the footer
+            </h4>
+          </div>
       </div>
     </div>
   );

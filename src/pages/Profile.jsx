@@ -23,7 +23,7 @@ const Profile = () => {
         <Popup   visible={visible}>
           <div id="popup-div">
             <div className="popup">
-              <h2>Say Hello to your Profile {user.name}!</h2>
+              <p >Say Hello to your Profile {user.name}!</p>
               <a className="close" href="#">
                 &times;
               </a>
@@ -46,14 +46,15 @@ const Profile = () => {
       <div className="col-md-12 text-center">
         <h3 className="animate-charcter">Welcom {user.name}</h3>
         <h1>
-          your favorite games:
-          <Carousel>
+          <p> your favorite games:</p>
+          
+          <Carousel>             
                 {faveGameArr.map(game=>{
                   return(
-                <div>
-                    <img src={game.background_image} />
-                    <p className="legend">Legend 1</p>
-                    <FiHeart  className={btnActive[game.id] ? "heartActive":"heartInactive"}  onClick={()=> dispatch(toggleFavorite(game))}></FiHeart>
+                <div className="carouselDiv">
+                    <img className="pCarouselImg" src={game.background_image} />    
+                    
+                    <FiHeart  className="heartActive"  onClick={()=> dispatch(toggleFavorite(game))}></FiHeart>
                 </div>        
             )
             })}

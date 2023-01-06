@@ -11,7 +11,7 @@
         padding-bottom: 15px;
 
     }
-
+    
     .sm-handle{
 
         display: flex;
@@ -21,7 +21,6 @@
         justify-content: center;
 
     }
-
     .sm-button{
 
     margin: 0px 10px 0px;
@@ -144,5 +143,9 @@
         grid-template-columns: 1fr;
 
     }
-
+    }
+    @media(max-width :280px){
+    .l-icone{
+        width: 35px !important;
+    }
     }
