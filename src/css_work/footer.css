@@ -48,7 +48,7 @@
         background: linear-gradient(to right, #6500ff, #a400ff	);
 
     }
-
+    
     .fab{
 
     color: #fff;
@@ -93,25 +93,11 @@
 
         font-family: Roboto;
 
-        color: #d5d5d5;
+        color: #a82020 !important;
 
         cursor: pointer;
 
     }
-
-    .menu-links:hover{
-
-        color: #6500ff;
-
-    }
-
-    .other-links:hover{
-
-        color: #6500ff;
-
-    }
-
-
     .copyright{
 
         font-size: 10px;

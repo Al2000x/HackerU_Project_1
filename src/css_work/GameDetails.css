@@ -5,6 +5,12 @@
   width: 1034px;
   height: 730px;
 }
+.fave-i{
+  padding: 5px;
+  background: rgb(252, 153, 153);
+  width: 50px;
+  margin: 0 auto;
+}
 .block {
     position: relative;
     width: 1024px;

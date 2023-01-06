@@ -2,14 +2,23 @@ import DOMPurify from "dompurify";
 import "../css_work/GameDetails.css";
 import { Navigate, useLocation } from "react-router";
 import React, { useEffect } from "react";
-
+import { toggleFavorite } from '../features/games/favorite-games-slice'
+import { FiHeart } from "react-icons/fi";
+import { useDispatch } from "react-redux";
+import { SocialIcon } from "react-social-icons";
 import { useState } from "react";
 const GameDetails = () => {
+  const [btnActive, setBtnActive] = useState({});   //{1:true}
   const [data, setData] = useState();
-
+  const dispatch = useDispatch();
   const location = useLocation();
   const game = location.state;
   const gameKey = game.id;
+  const toggleActive = (game) => {
+    btnActive[game.id] = !btnActive[game.id]
+    setBtnActive({...btnActive})
+}
+  
 
   useEffect(() => {
     fetch(
@@ -34,12 +43,39 @@ const GameDetails = () => {
           backgroundImage: `url(${game.short_screenshots.image})`,
         }}
       >
-        <h3>{game.tags[0].name}</h3>
-      </div>
+      <div  onClick={() => toggleActive(game)} className='text-center mb-1'> 
+              <p className=" fave-i">
+              <FiHeart  className={btnActive[game.id] ? "heartActive":"heartInactive"}  onClick={()=> dispatch(toggleFavorite(game))}></FiHeart>                         
+              </p>
+              </div>
       <div>
+        <h3>{game.tags[0].name}</h3>
+        <div> 
+         <h3>realeased {game.released}</h3> 
+        </div>
+        <div> 
+         <h3>{game.reddit_name}</h3> 
+        </div>
+      </div>
+       
+
         {data ? (
           <div>
-            <p>{data.id}</p>
+            <p>{data.id}</p>  
+            {data.reddit_url==""  ?  (
+             <h1></h1>
+            ):(
+              <div>          
+              <a  className="m-2">
+                <SocialIcon className="l-icone" url={data.reddit_url} target={"_blank"} />
+              </a >
+              <p>check out the reddit!</p>
+              </div> 
+            )}
+            {
+              data.platforms.filter((p) => p.requirements != null)[0]
+                .requirements.minimum
+            }
             {
               data.platforms.filter((p) => p.requirements != null)[0]
                 .requirements.minimum
@@ -49,6 +85,8 @@ const GameDetails = () => {
               data.platforms.filter((p) => p.requirements != null)[0]
                 .requirements.recommended
             }
+            <br />
+            
             <h4>
               <div
                 dangerouslySetInnerHTML={{
