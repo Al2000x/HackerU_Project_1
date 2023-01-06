@@ -11,7 +11,7 @@ const DropdownCategories = () => {
   return (
     // 
         <Dropdown>
-         <Dropdown.Toggle className={selectTheme.dark?"nav-link custom-dropdown darkTheme":"nav-link custom-dropdown lightTheme"}>
+         <Dropdown.Toggle className="nav-link custom-dropdown darkTheme">
         Browes Categories
       </Dropdown.Toggle>
       <Dropdown.Menu>

@@ -8,8 +8,8 @@
 }
 .loginForm {
   margin-top: 5rem;
-  text-shadow: #fff 0px 0px 5px, #fff 0px 0px 10px, #fff 0px 0px 15px,
-    #762dff 0px 0px 20px, #ffffff 0px 0px 30px, #ffffff 0px 0px 40px,
+  text-shadow: #fff 0px 0px 5px, #fff 0px 0px 0px, #fff 0px 0px 2px,
+    #762dff 0px 0px 15px, #ffffff 0px 0px 30px, #ffffff 0px 0px 40px,
     #762dff 0px 0px 50px, #ff2d95 0px 0px 75px;
   text-align: center;
   

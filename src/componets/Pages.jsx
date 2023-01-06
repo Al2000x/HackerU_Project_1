@@ -17,7 +17,7 @@ const Pages = () => {
       }}>
       <a className="next-page-left pageToggle "><span className='symbolRight'>◁</span></a>
     </li>
-    <h5 className='m-1'>page: {PageSlice.pNum}</h5>
+    <h5 className='m-1 text-center'>page: {PageSlice.pNum}</h5>
     <li className="page-item"onClick={()=>{
         dispatch(nextPage());
     }}>
