@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { changeTheme } from "../../features/theme/theme-toggle-slice";
 import { logout, selectUser } from "../../features/user/userSlice";
 const RightSideNav = () => {
-    const user = useSelector(selectUser);
+    const user = useSelector(selectUser);  
   const dispatch = useDispatch();
     const selectTheme = useSelector((state) => state.theme);
   return (
@@ -40,9 +40,11 @@ const RightSideNav = () => {
                   <button className=" user-false">Login now!</button>
                 </Link>
               ) : (
-                <div>
+                <div> 
+                   {/* <span>hello {user}</span>           */}
+                   <span> hello {user.name} </span>
                   <Link to={"/profile"}>
-                    <button className="user-true-left">Profile</button>
+                    <button className="user-true-left">Profile</button>                    
                   </Link>
                   <Link to={"/"}>
                     <button

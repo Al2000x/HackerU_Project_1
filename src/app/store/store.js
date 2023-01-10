@@ -8,6 +8,7 @@ import FavoriteSlice from "../../features/games/favorite-games-slice";
 
 /**
  * here we connect all of the slices together
+ * and distribute the information across the project using the provider in the index.js
  */
 
 const store = configureStore({
