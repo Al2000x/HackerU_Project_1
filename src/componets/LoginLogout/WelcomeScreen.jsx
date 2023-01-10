@@ -2,7 +2,10 @@ import zelda from '../../media/zelda.png'
 import { Link } from "react-router-dom";
 import { selectUser } from "../../features/user/userSlice";
 import {  useSelector } from 'react-redux';
-const Logout = () => {
+/**
+ * after logging in you will be greeted with this screen
+ */
+const WelcomeScreen = () => {
   const user = useSelector(selectUser)
   return (
     <div>
@@ -23,4 +26,4 @@ const Logout = () => {
   );
 };
 
-export default Logout;
+export default WelcomeScreen;

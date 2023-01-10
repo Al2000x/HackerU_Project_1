@@ -42,7 +42,7 @@ const RightSideNav = () => {
               ) : (
                 <div> 
                    {/* <span>hello {user}</span>           */}
-                   <span> hello {user.name} </span>
+                   <span> hello {user.name}! </span>
                   <Link to={"/profile"}>
                     <button className="user-true-left">Profile</button>                    
                   </Link>

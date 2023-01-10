@@ -1,37 +1,35 @@
 import React from "react";
-import { Carousel } from 'react-responsive-carousel';
+import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { useSelector } from "react-redux";
 import { selectUser } from "../features/user/userSlice";
 import Popup from "react-animated-popup";
-import { toggleFavorite } from '../features/games/favorite-games-slice'
-import { useDispatch } from 'react-redux'
+import { toggleFavorite } from "../features/games/favorite-games-slice";
+import { useDispatch } from "react-redux";
 import { FiHeart } from "react-icons/fi";
 import { useState } from "react";
 import "../css_work/Profile.css";
 
 const Profile = () => {
   const [visible, setVisible] = useState(true);
-  const [btnActive, setBtnActive] = useState({});   //{1:true}
   const dispatch = useDispatch();
   const user = useSelector(selectUser);
   const faveGameArr = useSelector((state) => state.fave.favorite);
-  console.log(faveGameArr);
+  console.log(faveGameArr[0]);
   return (
     <div>
-      <div >
-        <Popup   visible={visible}>
+      <div>
+        <Popup visible={visible}>
           <div id="popup-div">
             <div className="popup">
-              <p >Say Hello to your Profile {user.name}!</p>
-              <a className="close" href="#">
-                &times;
-              </a>
-              <div class="content ">
+              <p className="content text-dark">
+                Say Hello to your Profile {user.name}!
+              </p>
+              <div class="content mb-2 ">
                 Here you can see your favorite Games and you can also remove if
                 you wish to do so
               </div>
-            </div>            
+            </div>
           </div>
           <button
             onClick={() => {
@@ -47,18 +45,30 @@ const Profile = () => {
         <h3 className="animate-charcter">Welcom {user.name}</h3>
         <h1>
           <p> your favorite games:</p>
-          
-          <Carousel>             
-                {faveGameArr.map(game=>{
-                  return(
-                <div className="carouselDiv">
-                    <img className="pCarouselImg" src={game.background_image} />    
-                    
-                    <FiHeart  className="heartActive"  onClick={()=> dispatch(toggleFavorite(game))}></FiHeart>
-                </div>        
-            )
-            })}
-            </Carousel>         
+          <div>
+            {" "}
+            {faveGameArr[0] == null ? (
+              <h1 className="place-holder">Favorite some games to see theme here!</h1>
+            ) : (
+              <Carousel>
+                {faveGameArr.map((game) => {
+                  return (
+                    <div className="carouselDiv">
+                      <img
+                        className="pCarouselImg"
+                        src={game.background_image}
+                      />
+
+                      <FiHeart
+                        className="heartActive"
+                        onClick={() => dispatch(toggleFavorite(game))}
+                      ></FiHeart>
+                    </div>
+                  );
+                })}
+              </Carousel>
+            )}{" "}
+          </div>
         </h1>
       </div>
     </div>

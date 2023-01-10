@@ -50,7 +50,9 @@
 .control-dots{
  margin: 50px 0 !important;
 }
-
+.place-holder{
+  margin-bottom: 55vh;
+}
 .thumb{
   width: 100px !important;
 }
