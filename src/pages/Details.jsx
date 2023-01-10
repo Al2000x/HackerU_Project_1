@@ -101,7 +101,8 @@ const Details = () => {
           <h1>Want to stalk me?</h1>
         </div>
         <div className="questionSide ">
-          <h4 className="question-text2" >
+          <h4 className="question-text2" >            
+            my resume  <button><a href="../Resume/New Alex VC.pdf" download={"../Resume/New Alex VC.pdf"}></a>Download</button>  <br />
             you can follow all of my socials through the <br />links in the footer
             </h4>
           </div>
