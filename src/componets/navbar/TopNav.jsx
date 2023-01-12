@@ -7,6 +7,7 @@ import RightSideNav from "./RightSideNav";
 import LeftSideNav from "./LeftSide";
 
 const TopNav = () => {
+  // here we combine all of the components to build the Navbar in whole
   const selectTheme = useSelector((state) => state.theme);
   return (
     <Navbar

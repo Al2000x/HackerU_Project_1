@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const MiddleLinks = () => {
   return (
     <div>
-
+        {/* simple navbar with the DropDownCategories added for cleanliness */}
         <div id="navbarNavDropdown">
             <ul className="navbar-nav ">
                 <li className="nav-item active">

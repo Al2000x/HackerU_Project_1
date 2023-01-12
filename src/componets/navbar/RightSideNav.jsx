@@ -12,10 +12,11 @@ const RightSideNav = () => {
     const selectTheme = useSelector((state) => state.theme);
   return (
     <>
-    {/* theme changer swal */}
+    {/* theme changer sweet alert (Swal)*/}
     <img
          onClick={() => {
                 {
+                  //swal changing depending on the state
                   selectTheme.dark
                     ? Swal.fire(`light theme`)
                     : Swal.fire({
@@ -35,13 +36,14 @@ const RightSideNav = () => {
             {/* theme changer swal */}
             &nbsp;&nbsp;
             <div>
+              {/* just a check to ensure the website doesn't crash when the user == null */}
               {user == null ? (
                 <Link to={"/login"}>
                   <button className=" user-false">Login now!</button>
                 </Link>
               ) : (
                 <div> 
-                   {/* <span>hello {user}</span>           */}
+                   
                    <span> hello {user.name}! </span>
                   <Link to={"/profile"}>
                     <button className="user-true-left">Profile</button>                    

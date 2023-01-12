@@ -1,7 +1,13 @@
 import React from "react";
 import "../css_work/footer.css";
 import { SocialIcon } from 'react-social-icons';
+//very useful extention which automatically ads a social icon depending on the given url
 const Footer = () => {
+const socialLinksArray = [ "https://github.com/Al2000x",
+"https://twitter.com/al2000x", 
+"https://www.linkedin.com/in/alex-kiochukov-81411a241/",
+"https://www.instagram.com/a_l_e_x________is__me/",
+"https://www.facebook.com/alex.kiochukov"];
   return (
     <section className="footer">
       <footer>
@@ -9,6 +15,7 @@ const Footer = () => {
           <a className="m-2">
           <SocialIcon className="l-icone" url="https://github.com/Al2000x" target={"_blank"} />
           </a >
+          
           <a className="m-2">
            <SocialIcon className="l-icone" url="https://twitter.com/al2000x" target={"_blank"} />
           </a>
