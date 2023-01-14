@@ -15,6 +15,7 @@ const WelcomeScreen = () => {
                take this {user.name} 
           </h3>
           <img src={zelda} width="500px"/><br />
+          {/* navigates to the profile upon clicking */}
           <Link to={("/profile")}>
           <button type="submit" className="mt-3 glow-on-hover loginButton">
             Begin journy

@@ -50,6 +50,7 @@ const RightSideNav = () => {
                   </Link>
                   <Link to={"/"}>
                     <button
+                    // using dispatch to activate a certain function using redux syntax
                       onClick={() => {
                         dispatch(logout());
                       }}

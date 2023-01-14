@@ -5,7 +5,7 @@ const initialState = {
     error:'',
     loading: false
 }
-
+// the logic for building an array of favorit by using the current payload id of a game
 const FavoriteSlice = createSlice({ 
     name:"favorite",
     initialState,

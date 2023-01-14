@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-
+// a reducer for the pagination
 const initialState = { pNum: 1 }
 const PageSlice = createSlice({
     name:"favorite",

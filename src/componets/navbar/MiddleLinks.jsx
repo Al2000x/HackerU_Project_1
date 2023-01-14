@@ -9,6 +9,7 @@ const MiddleLinks = () => {
         <div id="navbarNavDropdown">
             <ul className="navbar-nav ">
                 <li className="nav-item active">
+                    {/* navs back to home */}
                 <Link to="/" className="nav-link custom-dropdown darkTheme">
                     Home
                 </Link>

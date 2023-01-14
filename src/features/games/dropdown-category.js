@@ -5,7 +5,7 @@ import {   actionGenre,
     casualGenre,
     puzzleGenre,
     racingGenre, } from "./category-slice";
-
+// just made an array here for cleanliness 
 export const dropdownItemsArray=[{
 
     navCategory:"action",
