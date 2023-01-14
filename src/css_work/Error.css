@@ -6,7 +6,7 @@
     position: relative;
     left: 9%;
   }
-  
+  /* this is for the 404 message glitch */
   @keyframes glitch{
     2%,0%{
       transform: translate(25px,0) skew(20deg);

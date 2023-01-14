@@ -19,8 +19,6 @@ input[type=text]{
     background: linear-gradient(to right, #FFFFFF 0%,#464747 #F9F9F9 100%);
     transition: width 0.4s ease;
     outline: none;
-    
-    
   }
   input[type=text]:focus{ width: 300px; }
   i{

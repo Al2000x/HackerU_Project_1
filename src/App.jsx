@@ -8,7 +8,6 @@ import GameDetails from "./pages/GameDetails";
 import NotFound404 from "./pages/NotFound404";
 import LoginLogout from "./pages/LoginLogout";
 import TopNav from "./componets/navbar/TopNav";
-import Home from "./pages/Home";
 import Profile from "./pages/Profile";
 import GeneralGames from "./componets/GeneralGames";
 import Discover from "./pages/Discover";

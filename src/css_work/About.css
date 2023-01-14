@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Quicksand:wght@500&display=swap');
+/* questionare part of the main page */
 .details{
     font-family: 'Quicksand', cursive;
    height: 100vh;
 }
 .infoDiv>div>h1{
-    padding-left: 5px;
-   
+    padding-left: 5px;   
 }
 .AlexPic{
     height: 175px;
@@ -21,8 +21,7 @@
     width: 114.5%;
     margin-top:1rem ;
     animation: 1s ease-out 0s 1 slideInFromLeft;
-    border: solid 5px rgb(49, 29, 63);
-   
+    border: solid 5px rgb(49, 29, 63);   
 }
 .answerSide1{
     clip-path: polygon(0 0, 75% 0, 100% 100%, 0 100%);
@@ -32,26 +31,21 @@
     margin-top:1rem ;
     animation: 1s ease-out 0s 1 slideInFromLeft;
     border: solid 5px rgb(226, 62, 87);
-
-
 }
 .infoDiv{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
-   
 }
 .questionSide{
     background:  rgb(226, 62, 87);
     border: solid 5px rgb(49, 29, 63);
-    
     clip-path: polygon(25% 0, 100% 0%, 100% 100%, 0 100%);
     position: relative;
     right: 14.5%;
     width: 114.5%;
     margin-top:1rem ;
     animation: 1s ease-out 0s 1 slideInFromRight;
-
 }
 .question-text1{
     text-align: end;
@@ -72,11 +66,9 @@
     top: 45px;
     width: 500px !important;
     height: 50px;
-    
 }
 .carouselImg{
     height: 50px;
-    
 }
 .answerSide{ 
     clip-path: polygon(0 0, 100% 0%, 75% 100%, 0 100%);
@@ -86,7 +78,6 @@
     margin-top:1rem ;
     animation: 1s ease-out 0s 1 slideInFromRight;
     border: solid 5px rgb(226, 62, 87);
-
 }
 @keyframes slideInFromLeft {
     0% {
@@ -109,7 +100,6 @@
         top: 25px;
         width: 500px !important;
         left: 100px;
-       
     }
     .question-text1{
         text-align: end;
@@ -141,7 +131,6 @@
     .axiosImg{
         width:100px ;
     }
-
     .AlexPic{
         height:150px ;
         bottom: 35px;
