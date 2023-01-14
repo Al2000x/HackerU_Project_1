@@ -4,17 +4,16 @@ import { toggleFavorite } from '../features/games/favorite-games-slice'
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { FiHeart } from "react-icons/fi";
-// import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 const GeneralGames = () => {
-  const [btnActive, setBtnActive] = useState({});   //{1:true}
+  const [btnActive, setBtnActive] = useState({});
      const { generalResultFiltered } = useAllGames()
      const dispatch = useDispatch();
      const toggleActive = (game) => {
       btnActive[game.id] = !btnActive[game.id]
       setBtnActive({...btnActive})
   }
-
+  //because we wrapped the app with the context we can extract the info and map it here
     return generalResultFiltered ? (
       <div className="item-Grid">
           {generalResultFiltered.map(game=>{

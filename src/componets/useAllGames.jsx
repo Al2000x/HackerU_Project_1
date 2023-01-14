@@ -4,13 +4,15 @@ import { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { createContext } from 'react'
 import { useContext } from 'react'
-
+//this hook helps us decide what info we want to extract
+//because each fetch gives different info i had to make to api fetches with different params
 const GamesContext = createContext(null)
 
 export const GamesContextProvider = ({children}) => {
-
+//using children we can provide the info throughout the project by wrapping the app with context
   const pageNum = useSelector(state=> state.page)
   const [generalResultFiltered, setGeneralResultFiltered] = useState()
+  //depending what is being fetched it will set the usestate acordingly
   const [query, setQuery] = useState(null)
 
   useEffect(() => {
@@ -40,8 +42,10 @@ export const GamesContextProvider = ({children}) => {
       setGeneralResultFiltered(result)
     })
   }, [pageNum,query])
+  //will be refetched when one of these happen
 
   return <GamesContext.Provider value={{ generalResultFiltered, setQuery }} >
+    {/* this will provide the final fetch using the two params */}
       {children}
   </GamesContext.Provider>
 }

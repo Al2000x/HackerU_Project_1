@@ -1,16 +1,16 @@
 import React from 'react'
-
 import { useDispatch,useSelector} from 'react-redux'
 import { nextPage, previousPage } from '../features/games/page-slice';
-
+//simple pagination using redux
 const Pages = () => {
   const dispatch=useDispatch();
   const PageSlice = useSelector((state) => state.page);
-  console.log()
   return (
     <div >
   <ul >
     <li className="page-item"  onClick={()=>{
+      //enables you to go back a page only if this if state happens
+      //blocks you from going below 1
        if(PageSlice.pNum>1){
          dispatch(previousPage())
        }

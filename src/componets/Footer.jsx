@@ -11,27 +11,14 @@ const socialLinksArray = [ "https://github.com/Al2000x",
   return (
     <section className="footer">
       <footer>
+        {/* maps the social icons with the array abovve */}
         <div className="sm-handle">
+          {socialLinksArray.map(item=>
           <a className="m-2">
-          <SocialIcon className="l-icone" url="https://github.com/Al2000x" target={"_blank"} />
-          </a >
-          
-          <a className="m-2">
-           <SocialIcon className="l-icone" url="https://twitter.com/al2000x" target={"_blank"} />
-          </a>
-          <a  className="m-2">
-          <SocialIcon className="l-icone" url="https://www.linkedin.com/in/alex-kiochukov-81411a241/" target={"_blank"} />
-          </a>
-
-          <a  className="m-2">
-          <SocialIcon className="l-icone" url="https://www.instagram.com/a_l_e_x________is__me/" target={"_blank"} />
-          </a>
-
-          <a className="m-2">
-          <SocialIcon className="l-icone" url="https://www.facebook.com/alex.kiochukov" target={"_blank"} />
-          </a>
+          <SocialIcon className="l-icone" url={item} target={"_blank"} />
+          </a >)}          
         </div>
-
+          {/* simple footer */}
         <div className="footer-links">
           <div ClassName="menu">
             <h4 ClassName="menu-title">Menu</h4>

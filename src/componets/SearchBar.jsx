@@ -4,7 +4,7 @@ import { BiSearchAlt } from "react-icons/bi";
 
 import "../css_work/SearchBar.css";
 // state dependent component
-// type script
+//using context we can give the query the param it needs to fetch the info
 const SearchBar = () => {
   const { setQuery } = useAllGames();
   const handleSubmit = (text) => {
@@ -16,6 +16,7 @@ const SearchBar = () => {
       <input placeholder="Search..." class="js-search text-center" type="text"
         onChange={(e) => {
           handleSubmit(e.target.value);
+          // this is what sends to the setquery the value and therefore it's no longer null
         }}/>
       <span>
         <BiSearchAlt className="MagEye" color="black" size="2rem" />
@@ -25,4 +26,3 @@ const SearchBar = () => {
 };
 
 export default SearchBar;
-// .map{results && JSON.stringify(results.result)}
