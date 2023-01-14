@@ -5,9 +5,11 @@ import { createSlice } from "@reduxjs/toolkit";
             user:null
         },
         reducers:{
+            // takes the payload and saves it to user
             login:(state, action)=>{     
                 state.user = action.payload   
             },
+            // simply sets the user back to null
             logout:(state)=>{
                 state.user=null;
             }

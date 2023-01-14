@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = { dark: true }
-
+// darktheme logic just a simple dispatch changes from false to true
 const ThemeSlice = createSlice({
     name:'theme',
     initialState,
