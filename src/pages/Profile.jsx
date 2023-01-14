@@ -19,6 +19,7 @@ const Profile = () => {
   return (
     <div>
       <div>
+        {/* popup using an extention */}
         <Popup visible={visible}>
           <div id="popup-div">
             <div className="popup">
@@ -50,6 +51,7 @@ const Profile = () => {
             {faveGameArr[0] == null ? (
               <h1 className="place-holder">Favorite some games to see theme here!</h1>
             ) : (
+              // a mapped carousell using the faveGameArr object array to display in real time an accurate carousell
               <Carousel>
                 {faveGameArr.map((game) => {
                   return (

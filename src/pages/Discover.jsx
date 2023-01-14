@@ -5,11 +5,11 @@ import Pages from '../componets/Pages'
 
 import SearchBar from '../componets/SearchBar'
 const Discover = () => {
- 
+ //combines all of the discover all games page
   return(<div className='pageCustom'>
-     <SearchBar />
-  <GeneralGames/> 
-  <Pages  />   
+    <SearchBar />
+    <GeneralGames/> 
+    <Pages  />   
 </div>)
 }
 

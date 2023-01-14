@@ -1,4 +1,6 @@
 import DOMPurify from "dompurify";
+//the api has some html elements to convert 
+//so we're using dompurify to make it safer
 import "../css_work/GameDetails.css";
 import { Navigate, useLocation } from "react-router";
 import React, { useEffect } from "react";
@@ -8,20 +10,23 @@ import { useDispatch } from "react-redux";
 import { SocialIcon } from "react-social-icons";
 import { useState } from "react";
 const GameDetails = () => {
-  const [btnActive, setBtnActive] = useState({});   //{1:true}
+  //this page fetches a specific game because this is the only way to get a more in depth
+  //info of this specific game
+  const [btnActive, setBtnActive] = useState({});
   const [data, setData] = useState();
   const dispatch = useDispatch();
   const location = useLocation();
+  //Returns the current navigation action which describes how the router came to
+  // the current location, either by a pop, push, or replace on the history stack.
   const game = location.state;
   const gameKey = game.id;
   const toggleActive = (game) => {
     btnActive[game.id] = !btnActive[game.id]
     setBtnActive({...btnActive})
 }
-  
-
   useEffect(() => {
     fetch(
+      //the gameKey is the id which we fetch by
       `https://api.rawg.io/api/games/${gameKey}?key=6c94fd57d797402f9b6628980ff9dc14`
     )
       .then((response) => response.json())
@@ -57,8 +62,6 @@ const GameDetails = () => {
          <h3>{game.reddit_name}</h3> 
         </div>
       </div>
-       
-
         {data ? (
           <div>
             <p>{data.id}</p>  
@@ -97,7 +100,6 @@ const GameDetails = () => {
           </div>
         ) : null}
       </div>
-      <div></div>
     </div>
   ) : (
     <Navigate to="/flappy" />

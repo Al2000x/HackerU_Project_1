@@ -7,6 +7,7 @@ import { useSelector } from "react-redux";
 import { selectUser } from "../features/user/userSlice";
 const LoginLogout = () => {
   const user = useSelector(selectUser);
+  //here we combine the return of WelcomeScreen and Login depending if the user == null
   return (
     <>
       <section>

@@ -43,12 +43,6 @@ const Details = () => {
       </a>
     </div>,
     <div className="text-center">
-     <span>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
-      </span>
       <a href="https://getbootstrap.com/" target="_blank">
         <img className="carouselImg" src={CarouselImg1} alt="bootstrap" />
       </a>

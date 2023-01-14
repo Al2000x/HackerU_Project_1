@@ -2,7 +2,6 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import { useSelector } from "react-redux";
 import GamesList from "./pages/GamesList";
-import Favorites from "./pages/Favorites";
 import Details from "./pages/Details";
 import GameDetails from "./pages/GameDetails";
 import NotFound404 from "./pages/NotFound404";
@@ -26,7 +25,6 @@ function App() {
       <Routes>
         <Route path="/"element={<Details/>}></Route>
         <Route path="/category/:id" element={<GamesList/>} ></Route>
-        <Route path="/favorites" element={<Favorites/>}></Route>
         <Route path="/discover" element={<Discover/>}></Route>
         <Route path="/general-games" element={<GeneralGames/>}></Route>
         <Route path="/login" element={<LoginLogout/>}></Route>

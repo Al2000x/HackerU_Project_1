@@ -1,6 +1,7 @@
 import React from 'react'
-import Error from '../css_work/Error.css'
+import '../css_work/Error.css'
 const NotFound404 = () => {
+  //the 404page simple set up
   return (
         <div className='error-section'> 
         <div className='error-wrapper'> 
